@@ -1,0 +1,254 @@
+# extension model 1
+
+	afterwards
+	alcohol
+	ancestor
+	antique
+	arch
+	arrow
+	astronaut
+	avenue
+	bet
+	bond
+	bonus
+	botanical
+	bowling
+	brand
+	buffet
+	butcher
+	cafeteria
+	calorie
+	canteen
+	capsule
+	cargo
+	carve
+	cave
+	cheese
+	chili
+	circuit
+	circus
+	citizen
+	client
+	collar
+	colleague
+	column
+	comic
+	Confucius
+	corporation
+	council
+	coupon
+	crew
+	cuisine
+	damp
+	depth
+	diamond
+	dinosaur
+	directory
+	drill
+	duration
+	dustbin
+	eagle
+	emperor
+	enterprise
+
+## 单词
+
+![afterwards](社会科学/英语/word%20library/word%20a.md#afterwards)
+![alcohol](社会科学/英语/word%20library/word%20a.md#alcohol)
+![ancestor](社会科学/英语/word%20library/word%20a.md#ancestor)
+![antique](社会科学/英语/word%20library/word%20a.md#antique)
+![arch](社会科学/英语/word%20library/word%20a.md#arch)
+![arrow](社会科学/英语/word%20library/word%20a.md#arrow)
+![astronaut](社会科学/英语/word%20library/word%20a.md#astronaut)
+![avenue](社会科学/英语/word%20library/word%20a.md#avenue)
+![bet](社会科学/英语/word%20library/word%20b.md#bet)
+![bond](社会科学/英语/word%20library/word%20b.md#bond)
+![bonus](社会科学/英语/word%20library/word%20b.md#bonus)
+![botanical](社会科学/英语/word%20library/word%20b.md#botanical)
+![bowling](社会科学/英语/word%20library/word%20b.md#bowling)
+![brand](社会科学/英语/word%20library/word%20b.md#brand)
+![buffet](社会科学/英语/word%20library/word%20b.md#buffet)
+![butcher](社会科学/英语/word%20library/word%20b.md#butcher)
+![cafeteria](社会科学/英语/word%20library/word%20c.md#cafeteria)
+![calorie](社会科学/英语/word%20library/word%20c.md#calorie)
+![canteen](社会科学/英语/word%20library/word%20c.md#canteen)
+![capsule](社会科学/英语/word%20library/word%20c.md#capsule)
+![cargo](社会科学/英语/word%20library/word%20c.md#cargo)
+![carve](社会科学/英语/word%20library/word%20c.md#carve)
+![cave](社会科学/英语/word%20library/word%20c.md#cave)
+![cheese](社会科学/英语/word%20library/word%20c.md#cheese)
+![chili](社会科学/英语/word%20library/word%20c.md#chili)
+![circuit](社会科学/英语/word%20library/word%20c.md#circuit)
+![circus](社会科学/英语/word%20library/word%20c.md#circus)
+![citizen](社会科学/英语/word%20library/word%20c.md#citizen)
+![client](社会科学/英语/word%20library/word%20c.md#client)
+![collar](社会科学/英语/word%20library/word%20c.md#collar)
+![colleague](社会科学/英语/word%20library/word%20c.md#colleague)
+![column](社会科学/英语/word%20library/word%20c.md#column)
+![comic](社会科学/英语/word%20library/word%20c.md#comic)
+![Confucius](社会科学/英语/word%20library/word%20c.md#Confucius)
+![corporation](社会科学/英语/word%20library/word%20c.md#corporation)
+![council](社会科学/英语/word%20library/word%20c.md#council)
+![coupon](社会科学/英语/word%20library/word%20c.md#coupon)
+![crew](社会科学/英语/word%20library/word%20c.md#crew)
+![cuisine](社会科学/英语/word%20library/word%20c.md#cuisine)
+![damp](社会科学/英语/word%20library/word%20d.md#damp)
+![depth](社会科学/英语/word%20library/word%20d.md#depth)
+![diamond](社会科学/英语/word%20library/word%20d.md#diamond)
+![dinosaur](社会科学/英语/word%20library/word%20d.md#dinosaur)
+![directory](社会科学/英语/word%20library/word%20d.md#directory)
+![drill](社会科学/英语/word%20library/word%20d.md#drill)
+![duration](社会科学/英语/word%20library/word%20d.md#duration)
+![dustbin](社会科学/英语/word%20library/word%20d.md#dustbin)
+![eagle](社会科学/英语/word%20library/word%20e.md#eagle)
+![emperor](社会科学/英语/word%20library/word%20e.md#emperor)
+![enterprise](社会科学/英语/word%20library/word%20e.md#enterprise)
+
+# 扩展词汇 51-100
+	equator
+	era
+	estate
+	executive
+	fibre
+	finance
+	fountain
+	friction
+	frost
+	gallon
+	geometry
+	grain
+	hence
+	hockey
+	hurricane
+	invoice
+	kettle
+	lane
+	load
+	loaf
+	loan
+	log
+	marathon
+	microscope
+	minister
+	mist
+	mop
+	mosquito
+	mutton
+	nail
+	navy
+	nest
+	panel
+	parcel
+	plug
+	plumber
+	polar
+	pond
+	radium
+	rhyme
+	押韵
+	riddle
+	satellite
+	saucer
+	servant
+	sleeve
+	stationery
+	statue
+	steward
+	strait
+	suite
+
+## 单词
+
+
+![equator](社会科学/英语/word%20library/word%20e.md#equator)
+![era](社会科学/英语/word%20library/word%20e.md#era)
+![estate](社会科学/英语/word%20library/word%20e.md#estate)
+![executive](社会科学/英语/word%20library/word%20e.md#executive)
+![fiber](社会科学/英语/word%20library/word%20f.md#fiber)
+![finance](社会科学/英语/word%20library/word%20f.md#finance)
+![fountain](社会科学/英语/word%20library/word%20f.md#fountain)
+![friction](社会科学/英语/word%20library/word%20f.md#friction)
+![frost](社会科学/英语/word%20library/word%20f.md#frost)
+![gallon](社会科学/英语/word%20library/word%20g.md#gallon)
+![geometry](社会科学/英语/word%20library/word%20g.md#geometry)
+![grain](社会科学/英语/word%20library/word%20g.md#grain)
+![hence](社会科学/英语/word%20library/word%20h.md#hence)
+![hockey](社会科学/英语/word%20library/word%20h.md#hockey)
+![hurricane](社会科学/英语/word%20library/word%20h.md#hurricane)
+![invoice](社会科学/英语/word%20library/word%20i.md#invoice)
+![kettle](社会科学/英语/word%20library/word%20k.md#kettle)
+![lane](社会科学/英语/word%20library/word%20l.md#lane)
+![load](社会科学/英语/word%20library/word%20l.md#load)
+![loaf](社会科学/英语/word%20library/word%20l.md#loaf)
+![loan](社会科学/英语/word%20library/word%20l.md#loan)
+![log](社会科学/英语/word%20library/word%20l.md#log)
+![marathon](社会科学/英语/word%20library/word%20m.md#marathon)
+![microscope](社会科学/英语/word%20library/word%20m.md#microscope)
+![minister](社会科学/英语/word%20library/word%20m.md#minister)
+![mist](社会科学/英语/word%20library/word%20m.md#mist)
+![mop](社会科学/英语/word%20library/word%20m.md#mop)
+![mosquito](社会科学/英语/word%20library/word%20m.md#mosquito)
+![mutton](社会科学/英语/word%20library/word%20m.md#mutton)
+![nail](社会科学/英语/word%20library/word%20n.md#nail)
+![navy](社会科学/英语/word%20library/word%20n.md#navy)
+![nest](社会科学/英语/word%20library/word%20n.md#nest)
+![panel](社会科学/英语/word%20library/word%20p.md#panel)
+![parcel](社会科学/英语/word%20library/word%20p.md#parcel)
+![plug](社会科学/英语/word%20library/word%20p.md#plug)
+![plumber](社会科学/英语/word%20library/word%20p.md#plumber)
+![polar](社会科学/英语/word%20library/word%20p.md#polar)
+![pond](社会科学/英语/word%20library/word%20p.md#pond)
+![radium](社会科学/英语/word%20library/word%20r.md#radium)
+![rhyme](社会科学/英语/word%20library/word%20r.md#rhyme)
+![riddle](社会科学/英语/word%20library/word%20r.md#riddle)
+![satellite](社会科学/英语/word%20library/word%20s.md#satellite)
+![saucer](社会科学/英语/word%20library/word%20s.md#saucer)
+![servant](社会科学/英语/word%20library/word%20s.md#servant)
+![sleeve](社会科学/英语/word%20library/word%20s.md#sleeve)
+![stationery](社会科学/英语/word%20library/word%20s.md#stationery)
+![statue](社会科学/英语/word%20library/word%20s.md#statue)
+![steward](社会科学/英语/word%20library/word%20s.md#steward)
+![strait](社会科学/英语/word%20library/word%20s.md#strait)
+![suite](社会科学/英语/word%20library/word%20s.md#suite)
+
+# 扩展词汇 101-118
+
+	symphony
+	tablet
+	teapot
+	telescope
+	tone
+	torch
+	tournament
+	tray
+	troop
+	tube
+	tunnel
+	union
+	valley
+	vase
+	venue
+	vet
+	voyage
+	wrist
+
+## 单词
+
+![symphony](社会科学/英语/word%20library/word%20s.md#symphony)
+![tablet](社会科学/英语/word%20library/word%20t.md#tablet)
+![teapot](社会科学/英语/word%20library/word%20t.md#teapot)
+![telescope](社会科学/英语/word%20library/word%20t.md#telescope)
+![tone](社会科学/英语/word%20library/word%20t.md#tone)
+![torch](社会科学/英语/word%20library/word%20t.md#torch)
+![tournament](社会科学/英语/word%20library/word%20t.md#tournament)
+![tray](社会科学/英语/word%20library/word%20t.md#tray)
+![troop](社会科学/英语/word%20library/word%20t.md#troop)
+![tube](社会科学/英语/word%20library/word%20t.md#tube)
+![tunnel](社会科学/英语/word%20library/word%20t.md#tunnel)
+![union](社会科学/英语/word%20library/word%20u.md#union)
+![valley](社会科学/英语/word%20library/word%20v.md#valley)
+![vase](社会科学/英语/word%20library/word%20v.md#vase)
+![venue](社会科学/英语/word%20library/word%20v.md#venue)
+![vet](社会科学/英语/word%20library/word%20v.md#vet)
+![voyage](社会科学/英语/word%20library/word%20v.md#voyage)
+![wrist](社会科学/英语/word%20library/word%20w.md#wrist)

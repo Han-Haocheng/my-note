@@ -1,0 +1,13 @@
+; 编程，计算1E F000H+20 1000H,结果放在ax(高16位)和bx(低16位)中
+
+ASSUME CS:CODESG
+
+CODESG SEGMENT
+  START: MOV AX,001EH
+         MOV BX,0F000H
+         ADD BX,1000H
+         ADC AX,0020H
+         MOV AX,4C00H
+         INT 21H
+CODESG ENDS
+END START
