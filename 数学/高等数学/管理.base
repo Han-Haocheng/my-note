@@ -10,14 +10,17 @@ views:
         - file.ext != "md"
     order:
       - file.name
+      - file.backlinks
     sort: []
     summaries:
       formula.未命名: new summary
     columnSize:
       file.name: 225
     image: file.file
-  - type: table
+  - type: list
     name: 笔记
     filters:
       and:
         - file.ext == "md"
+    markers: bullet
+    indentProperties: false
