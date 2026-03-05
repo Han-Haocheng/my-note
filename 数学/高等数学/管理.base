@@ -21,5 +21,4 @@ views:
     name: 笔记
     filters:
       and:
-        - '!file.inFolder("数学/高等数学/_old")'
         - file.ext == "md"
