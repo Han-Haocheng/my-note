@@ -4,7 +4,9 @@ filters:
     - file.tags.filter(t.startsWith("#数学/公式/")).length > 0
 formulas:
   公式: if(file.tags.filter(t.startsWith("#数学/公式")).length > 0, ts[0], "无标签")
-  未命名: ""
+  有子标签: file.tags.filter(t.startsWith("#数学/公式/") && t != "#数学/公式").length > 0
+  未命名: if(file.tags.filter(t.startsWith("#数学/公式/")).length > 0, ts[0], "无子标签")
+  未命名 2: file.values()
 properties:
   formula.公式:
     displayName: 数学标签
@@ -14,4 +16,6 @@ views:
     order:
       - file.name
       - formula.公式
+      - formula.有子标签
       - formula.未命名
+      - formula.未命名 2
