@@ -1,3 +1,7 @@
+filters:
+  and:
+    - file.inFolder("数学/高等数学")
+    - '!file.inFolder("数学/高等数学/_old")'
 views:
   - type: table
     name: 附件
@@ -17,6 +21,5 @@ views:
     name: 笔记
     filters:
       and:
-        - file.inFolder("数学/高等数学")
         - '!file.inFolder("数学/高等数学/_old")'
         - file.ext == "md"
