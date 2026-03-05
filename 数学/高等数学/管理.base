@@ -15,6 +15,7 @@ views:
       formula.未命名: new summary
     columnSize:
       file.name: 225
+    image: file.file
   - type: table
     name: 笔记
     filters:
