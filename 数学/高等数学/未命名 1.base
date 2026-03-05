@@ -2,7 +2,7 @@ filters:
   and:
     - file.tags.contains("#数学/公式")
 formulas:
-  公式: file.
+  公式: ""
 views:
   - type: table
     name: 表格
