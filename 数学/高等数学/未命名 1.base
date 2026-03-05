@@ -1,9 +1,14 @@
 filters:
   and:
     - file.tags.contains("#数学/公式")
+formulas:
+  公式: file.tags.
 views:
   - type: table
     name: 表格
     filters:
       and:
         - file.tags.contains("#数学/公式")
+    order:
+      - file.name
+      - formula.公式
