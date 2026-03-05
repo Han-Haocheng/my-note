@@ -10,7 +10,6 @@ views:
         - file.ext != "md"
     order:
       - file.name
-      - tags
     sort:
       - property: file.name
         direction: ASC
