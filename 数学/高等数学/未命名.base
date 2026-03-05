@@ -1,5 +1,5 @@
 formulas:
-  未命名: x+y
+  未命名: ""
 views:
   - type: table
     name: 表格
@@ -9,3 +9,4 @@ views:
     order:
       - file.name
       - formula.未命名
+    sort: []
