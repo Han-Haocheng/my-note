@@ -1,67 +1,59 @@
 filters:
   or:
     - file.hasTag("数学/公式")
-    - file.tags.any().startsWith("数学/公式/")
+    - file.tags.filter(t.startsWith("#数学/公式/")).length > 0
 
 formulas:
-  # 提取子标签名称（如果有）
-  子标签:
-    'file.tags.filter(t => t.startsWith("数学/公式/")).map(t => t.replace("数学/公式/", "")).first() || "无子标签"'
-  
-  # 判断是否有子标签
-  有子标签:
-    'file.tags.any(t => t.startsWith("数学/公式/") && t != "数学/公式")'
-  
-  # 获取所有数学相关标签
-  数学标签:
-    'file.tags.filter(t => t.startsWith("数学/公式"))'
+  mathTag:
+    'let ts = file.tags.filter(t.startsWith("#数学/公式")); if(ts.length > 0, ts[0], "无标签")'
+
+  hasChildTag:
+    'file.tags.filter(t.startsWith("#数学/公式/") && t != "#数学/公式").length > 0'
+
+  childTag:
+    'let ts = file.tags.filter(t.startsWith("#数学/公式/")); if(ts.length > 0, ts[0], "无子标签")'
 
 properties:
-  file.name:
-    displayName: "文件名"
-  file.ctime:
-    displayName: "创建时间"
-  file.mtime:
-    displayName: "修改时间"
-  formula.子标签:
-    displayName: "子标签分类"
-  formula.有子标签:
-    displayName: "有子标签"
-  formula.数学标签:
-    displayName: "所有标签"
+  - file.name
+  - file.ctime
+  - file.mtime
+  - formula.childTag
+  - formula.hasChildTag
+  - formula.mathTag
 
 views:
   # 按子标签分组视图
   - type: table
     name: "按子标签分类"
     groupBy:
-      property: formula.子标签
+      property: formula.childTag
       direction: ASC
     order:
-      - formula.子标签
+      - formula.childTag
       - file.name
       - file.mtime
-      - formula.数学标签
+      - formula.mathTag
 
   # 所有公式列表视图
   - type: table
     name: "所有公式"
     order:
       - file.name
-      - formula.子标签
-      - formula.数学标签
+      - formula.childTag
+      - formula.mathTag
       - file.mtime
 
   # 有子标签的公式
   - type: table
     name: "有子标签的公式"
     filters:
-      - 'formula.有子标签'
+      and:
+        - 'formula.hasChildTag'
     groupBy:
-      property: formula.子标签
+      property: formula.childTag
       direction: ASC
     order:
-      - formula.子标签
+      - formula.childTag
       - file.name
       - file.mtime
 
@@ -69,16 +61,17 @@ views:
   - type: table
     name: "无子标签的公式"
     filters:
-      - '!formula.有子标签'
+      and:
+        - '!formula.hasChildTag'
     order:
       - file.name
       - file.mtime
-      - formula.数学标签
+      - formula.mathTag
 
-  # 卡片视图
+  # 卡片视图（若不支持则改为 table 或 list）
   - type: cards
     name: "卡片视图"
     order:
       - file.name
-      - formula.子标签
-      - formula.数学标签
+      - formula.childTag
+      - formula.mathTag

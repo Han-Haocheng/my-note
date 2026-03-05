@@ -1,6 +1,6 @@
 filters:
-  and:
-    - file.tags.contains("#数学/公式")
+  or:
+    - file.hasTag("数学/公式")
 formulas:
   公式: ""
 views:
