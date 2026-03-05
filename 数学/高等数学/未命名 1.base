@@ -2,12 +2,13 @@ filters:
   or:
     - file.hasTag("数学/公式")
     - file.tags.filter(t.startsWith("#数学/公式/")).length > 0
-formulas:
-  未命名: ""
 views:
   - type: table
     name: 表格
     order:
       - file.name
       - tags
-      - formula.未命名
+    summaries:
+      formula.未命名: new summary
+    columnSize:
+      file.name: 225
