@@ -3,8 +3,11 @@ filters:
     - file.inFolder("数学/高等数学")
     - '!file.inFolder("数学/高等数学/_old")'
 views:
-  - type: table
+  - type: cards
     name: 附件
+    filters:
+      and:
+        - file.ext != "md"
     order:
       - file.name
       - tags
