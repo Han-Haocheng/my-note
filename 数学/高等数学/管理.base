@@ -17,6 +17,7 @@ views:
     columnSize:
       file.name: 225
     image: file.file
+    imageFit: contain
   - type: list
     name: 笔记
     filters:
