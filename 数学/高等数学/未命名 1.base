@@ -3,13 +3,15 @@ filters:
     - file.hasTag("数学/公式")
     - file.tags.filter(t.startsWith("#数学/公式/")).length > 0
 formulas:
-  公式: ""
+  公式: if(file.tags.filter(t.startsWith("#数学/公式")).length > 0, ts[0], "无标签")
+  未命名: ""
+properties:
+  formula.公式:
+    displayName: 数学标签
 views:
   - type: table
     name: 表格
-    filters:
-      and:
-        - file.tags.contains("#数学/公式")
     order:
       - file.name
       - formula.公式
+      - formula.未命名

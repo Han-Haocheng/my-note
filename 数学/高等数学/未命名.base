@@ -4,43 +4,43 @@ filters:
     - file.tags.filter(t.startsWith("#数学/公式/")).length > 0
 
 formulas:
-  mathTag:
+  数学标签:
     'let ts = file.tags.filter(t.startsWith("#数学/公式")); if(ts.length > 0, ts[0], "无标签")'
 
-  hasChildTag:
+  有子标签:
     'file.tags.filter(t.startsWith("#数学/公式/") && t != "#数学/公式").length > 0'
 
-  childTag:
+  子标签:
     'let ts = file.tags.filter(t.startsWith("#数学/公式/")); if(ts.length > 0, ts[0], "无子标签")'
 
 properties:
   - file.name
   - file.ctime
   - file.mtime
-  - formula.childTag
-  - formula.hasChildTag
-  - formula.mathTag
+  - formula.子标签
+  - formula.有子标签
+  - formula.数学标签
 
 views:
   # 按子标签分组视图
   - type: table
     name: "按子标签分类"
     groupBy:
-      property: formula.childTag
+      property: formula.子标签
       direction: ASC
     order:
-      - formula.childTag
+      - formula.子标签
       - file.name
       - file.mtime
-      - formula.mathTag
+      - formula.数学标签
 
   # 所有公式列表视图
   - type: table
     name: "所有公式"
     order:
       - file.name
-      - formula.childTag
-      - formula.mathTag
+      - formula.子标签
+      - formula.数学标签
       - file.mtime
 
   # 有子标签的公式
@@ -48,12 +48,12 @@ views:
     name: "有子标签的公式"
     filters:
       and:
-        - 'formula.hasChildTag'
+        - 'formula.有子标签'
     groupBy:
-      property: formula.childTag
+      property: formula.子标签
       direction: ASC
     order:
-      - formula.childTag
+      - formula.子标签
       - file.name
       - file.mtime
 
@@ -62,16 +62,16 @@ views:
     name: "无子标签的公式"
     filters:
       and:
-        - '!formula.hasChildTag'
+        - '!formula.有子标签'
     order:
       - file.name
       - file.mtime
-      - formula.mathTag
+      - formula.数学标签
 
   # 卡片视图（若不支持则改为 table 或 list）
   - type: cards
     name: "卡片视图"
     order:
       - file.name
-      - formula.childTag
-      - formula.mathTag
+      - formula.子标签
+      - formula.数学标签
