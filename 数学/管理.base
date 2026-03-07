@@ -1,6 +1,6 @@
 filters:
   and:
-    - file.inFolder("数学/高等数学")
+    - file.inFolder("数学")
     - '!file.inFolder("数学/高等数学/_old")'
 views:
   - type: cards
@@ -23,5 +23,7 @@ views:
     filters:
       and:
         - file.ext == "md"
+    order:
+      - file.name
     markers: bullet
-    indentProperties: false
+    indentProperties: true
