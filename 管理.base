@@ -23,6 +23,7 @@ views:
     filters:
       and:
         - file.ext == "md"
+        - "!file.links.isEmpty()"
     order:
       - file.name
       - file.links
