@@ -18,7 +18,7 @@ views:
       file.name: 225
     image: file.file
     imageFit: contain
-  - type: table
+  - type: list
     name: 笔记
     filters:
       and:
