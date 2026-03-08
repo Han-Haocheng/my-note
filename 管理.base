@@ -25,5 +25,6 @@ views:
         - file.ext == "md"
     order:
       - file.name
+      - file.links
     markers: bullet
     indentProperties: true
