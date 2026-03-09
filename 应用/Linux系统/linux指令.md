@@ -3,7 +3,7 @@
 	-  cd：改变当前工作目录![[应用/Linux系统/Pasted image 20260309214625.png]]
 	-  pwd：显示当前工作目录![[应用/Linux系统/Pasted image 20260309214647.png]]
 	-  mkdir：创建新目录  
-	-  rmdir：删除空目录  
+	-  rmdir：删除空目录 ![[应用/Linux系统/Pasted image 20260309214805.png]]
 	-  cp：复制文件或目录  
 	-  rm：删除文件或目录  
 	-  mv：移动文件或目录  
