@@ -13,10 +13,10 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
-进口 笨蛋 作为 氮磷酰胺
-氮磷酰胺.__版本__
+import numpy as np	
+np.__version__
 ```
 
 ```{code-cell} ipython3
-！pip 安装 --升级 numpy
+！pip install --upgrade numpy
 ```
