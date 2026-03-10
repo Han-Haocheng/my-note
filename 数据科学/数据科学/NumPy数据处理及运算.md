@@ -18,6 +18,8 @@ jupyter:
 
 ## 创建N维数组
 
+`numpy.narray()`
+
 ```python
 
 ```
