@@ -13,5 +13,5 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
-
+!ls
 ```
