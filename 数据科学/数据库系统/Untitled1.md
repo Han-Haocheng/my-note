@@ -13,9 +13,10 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
-!ls -al
+进口 笨蛋 作为 氮磷酰胺
+氮磷酰胺.__版本__
 ```
 
 ```{code-cell} ipython3
-!mysql -uroot -p3043559
+！pip 安装 --升级 numpy
 ```
