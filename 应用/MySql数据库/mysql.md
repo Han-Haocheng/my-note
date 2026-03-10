@@ -12,8 +12,13 @@ CREATE TABLE [IF NOT EXISTS] <`tb_name`>{
 };
 ```
 
+
+
+---
 # 数据操作语句
 
+---
 # 数据库管理语句
 
+---
 # 事务管理语句
