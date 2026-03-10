@@ -18,7 +18,9 @@ jupyter:
 
 ## 创建N维数组
 
-`numpy.narray()`
+`numpy.narray()`：构造一个 `ndarray` 对象，据有固定大小项的多维同质数组
+
+格式
 
 ```python
 
