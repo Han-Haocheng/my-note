@@ -13,5 +13,9 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
-!ls
+!ls -al
+```
+
+```{code-cell} ipython3
+!mysql -uroot -p3043559
 ```
