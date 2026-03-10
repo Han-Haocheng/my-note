@@ -18,5 +18,5 @@ np.__version__
 ```
 
 ```{code-cell} ipython3
-！pip install --upgrade numpy
+np.ndarray(shape=(2,2), dtype=float,order='F')
 ```
