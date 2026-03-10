@@ -25,4 +25,12 @@ jupyter:
 ```python
 class numpy.ndarray(shape,dtype=float,buffer=None,offset=0,strides=Node,...)
 ```
+```python
+import numpy as np
 
+np.ndarray(shape=(2,2),dtype=float,order='F')
+```
+
+```python
+
+```
