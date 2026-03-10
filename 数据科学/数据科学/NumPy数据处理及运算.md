@@ -23,5 +23,6 @@ jupyter:
 格式
 
 ```python
-
+class numpy.ndarray(shape,dtype=float,buffer=None,offset=0,strides=Node,...)
 ```
+
