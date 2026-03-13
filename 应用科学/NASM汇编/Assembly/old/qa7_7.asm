@@ -1,0 +1,47 @@
+; 问题7.7：编程，将datasg 段中每个单词改为大写字母。
+
+ASSUME CS:CODESG,DS:DATASG,SS:STACKSG
+
+DATASG SEGMENT
+	DB 'ibm             '
+	DB 'dec             '
+	DB 'dos             '
+	DB 'vax             '
+DATASG ENDS
+
+STACKSG SEGMENT
+	DW 0,0,0,0,0,0,0,0
+STACKSG ENDS
+
+CODESG SEGMENT
+START:
+	MOV AX,DATASG
+	MOV DS,AX
+	MOV BX,0
+
+	MOV AX,STACKSG
+	MOV SS,AX
+	MOV SP,10H
+
+	MOV CX,4
+S:
+	PUSH	CX
+
+	MOV SI,0
+	MOV CX,3
+S0:
+	MOV	AL,[BX+SI]
+	AND AL,11011111B
+	MOV [BX+SI],AL
+	INC SI
+	LOOP	S0
+	
+	POP	CX
+	ADD BX,16
+	LOOP	S
+
+	MOV AX,4C00H
+	INT 21H
+CODESG ENDS
+
+END START

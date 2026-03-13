@@ -1,0 +1,21 @@
+ASSUME CS:CODE,DS:DATA,SS:STACK
+
+DATA SEGMENT
+       DB 'WELCOME TO MASM!'
+       DB 16 DUP(0)
+DATA ENDS
+
+CODE SEGMENT
+  START:MOV AX,DATA
+        MOV DS,AX
+        MOV SI,0
+        MOV DI,16
+        CLD
+        MOV CX,16
+        REP MOVSB
+
+        MOV AX,4C00H
+        INT 21H
+
+CODE ENDS
+END START
