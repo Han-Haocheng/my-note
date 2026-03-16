@@ -8,7 +8,7 @@ jupyter:
       format_version: '1.3'
       jupytext_version: 1.18.1
   kernelspec:
-    display_name: Python 3 (ipykernel)
+    display_name: Python 3
     language: python
     name: python3
 ---
@@ -73,16 +73,9 @@ numpy.linspace(start,stop,num=50,endpoint=True,retstep=False,dtype=None)
 
 ```
 
-<!-- #region -->
 ## 数组操作
 ###  改变数组形状
 
-<!-- #endregion -->
 
-```python
-a = np.arange(9)
-print ('原始数组为：',a)
-b = a.reshape(3,3)
-print ('修改后的数组：')
-print(b)
-```
+
+
