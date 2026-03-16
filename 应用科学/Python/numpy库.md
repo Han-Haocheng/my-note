@@ -95,5 +95,6 @@ print("a=",a)
 ```
 
 ```python
-
+a=np.arange(20)
+a[-1::]
 ```
