@@ -65,17 +65,35 @@ numpy.linspace(start,stop,num=50,endpoint=True,retstep=False,dtype=None)
 ```
 <!-- #endregion -->
 
-```python
-
-```
-
-```python
-
-```
-
+<!-- #region -->
 ## 数组操作
-###  改变数组形状
+### numpy.reshape()改变数组形状
 
+numpy.reshape() 函数在不改变数据的条件下，可以修改数组的形状（维度和大小）
 
+```python
+numpy.reshape(arr, newshape, order='C')
+```
+<!-- #endregion -->
 
+```python
+a = np.arange(9)
+print ('原始数组为：',a)
+b = a.reshape(3,3)
+print ('修改后的数组：')
+print(b)
+```
 
+```python
+a = np.arange(9)
+b = a.resize(3,3)
+print ('a=',a)
+print ('b=',b)
+
+a.shape=(3,3)
+print("a=",a)
+```
+
+```python
+
+```
