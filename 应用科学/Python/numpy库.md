@@ -77,5 +77,7 @@ numpy.linspace(start,stop,num=50,endpoint=True,retstep=False,dtype=None)
 ###  改变数组形状
 
 
-
+```python
+numpy.reshape(arr, newshape, order='C')
+```
 
