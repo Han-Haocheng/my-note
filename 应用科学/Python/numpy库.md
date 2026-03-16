@@ -15,8 +15,17 @@ jupyter:
 
 # numpy库
 
-## 相关指令
 
-<!-- #raw -->
+```python
+import numpy as np
+np.__version__
+```
 
-<!-- #endraw -->
+```python
+np.ndarray(shape=(2,2), dtype=float, order='F')
+np.ndarray((2,), buffer = np.array([1,2,3]), offset=np.int_().itemsize, dtype = int)
+```
+
+```python
+
+```
