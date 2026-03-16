@@ -79,3 +79,10 @@ numpy.linspace(start,stop,num=50,endpoint=True,retstep=False,dtype=None)
 
 <!-- #endregion -->
 
+```python
+a = np.arange(9)
+print ('原始数组为：',a)
+b = a.reshape(3,3)
+print ('修改后的数组：')
+print(b)
+```
