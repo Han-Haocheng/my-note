@@ -41,8 +41,12 @@ np.ndarray((2,), buffer = np.array([1,2,3]), offset=np.int_().itemsize, dtype = 
 
 ## numpy.arange()
 
-·
+```
+numpy.arange(start=0, stop, step=1, dtype=int)
+```
 
 ```python
-
+np.arange(0,20,4)
 ```
+
+### numpy.linspace()
