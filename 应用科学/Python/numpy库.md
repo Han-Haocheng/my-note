@@ -21,11 +21,17 @@ import numpy as np
 np.__version__
 ```
 
-```python
-np.ndarray(shape=(2,2), dtype=float, order='F')
-np.ndarray((2,), buffer = np.array([1,2,3]), offset=np.int_().itemsize, dtype = int)
-```
+## numpy.ndarray()多维数组
 
 ```python
+np.ndarray(shape=(2,2), dtype=float, order='F') # 创建ndarray
 
 ```
+
+### numpy.ndarray()多维数组
+
+```python
+np.ndarray((2,), buffer = np.array([1,2,3]), offset=np.int_().itemsize, dtype = int) 
+```
+
+
