@@ -37,3 +37,12 @@ np.ndarray((2,), buffer = np.array([1,2,3]), offset=np.int_().itemsize, dtype = 
 
 
 ## numpy.array()
+
+
+## numpy.arange()
+
+·
+
+```python
+
+```
