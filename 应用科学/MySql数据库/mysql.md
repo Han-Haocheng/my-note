@@ -1,17 +1,37 @@
+# mysql
+
+## 数据类型
+
+### 数值类型
+
+
+TINYINT：很小整数，M 表示数值的位数，
+ - 带符号的范围是-128～127，无符号的范围是 0～255。
+
+```mysql
+TINYINT[(M)] [UNSIGNED] [ZEROFILL] 
+```
+ - `[UNSIGNED]`指定无符号正值；
+ - `[ZEROFILL]`填充 0 。
+
+
+```
+INT[(M)] 
+```
+
 ## 数据定义语句
 
 
 ### 创建数据库
 
 ```mysql
-CREATE DATABASE [IF NOT EXISTS] <`db_name`> 
+CREATE { DATABASE | SCHEMA } [IF NOT EXISTS] <`db_name`> 
 	[[DEFAULT] CHARACTER SET <charset>] 
 	[[DEFAULT] COLLATE [=] <collate_>];
 ```
 
 
 ### 修改数据库
-
 
 ```MYSQL
 ALTER { DATABASE | SCHEMA } [ db_name ] 
@@ -22,14 +42,28 @@ ALTER { DATABASE | SCHEMA } [ db_name ]
 ### 删除数据库
 
 ```Mysql
-
+DROP { DATABASE | SCHEMA } [ IF EXISTS ] db_name;
 ```
 
+### 使用数据库
+
+```mysql
+USE <`db_name`>
+```
+
+
+### 展示信息
+
+```mysql
+
+```
 ## 创建数据表
 ```mysql
 CREATE TABLE [IF NOT EXISTS] <`tb_name`>{
-  <f>
-};
+  <`fiald_name`> <type> [NOT NULL] [UNIQUE] [PRIMARY KEY],
+  ...
+  [,PR]
+}[ENGINE=<`engin_name`>];
 ```
 
 
