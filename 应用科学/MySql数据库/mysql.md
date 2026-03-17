@@ -1,17 +1,27 @@
-# 数据定义语句
+## 数据定义语句
 
 
-## 创建数据库
+### 创建数据库
 
 ```mysql
-CREATE DATABASE [IF NOT EXISTS] <`db_name`> [[DEFAULT] CHARACTER SET <charset>] [[DEFAULT] COLLATE [=] <collate_>];
+CREATE DATABASE [IF NOT EXISTS] <`db_name`> 
+	[[DEFAULT] CHARACTER SET <charset>] 
+	[[DEFAULT] COLLATE [=] <collate_>];
 ```
 
 
-## 修改数据库
+### 修改数据库
 
 
 ```MYSQL
+ALTER { DATABASE | SCHEMA } [ db_name ] 
+	[DEFAULT] CHARACTE SET [ = ] charset_name
+	[DEFAULT] COLLATE [ = ] collation name;
+```
+
+### 删除数据库
+
+```Mysql
 
 ```
 
