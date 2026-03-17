@@ -1,9 +1,18 @@
 # 数据定义语句
 
+
 ## 创建数据库
 
 ```mysql
 CREATE DATABASE [IF NOT EXISTS] <`db_name`> [[DEFAULT] CHARACTER SET <charset>] [[DEFAULT] COLLATE [=] <collate_>];
+```
+
+
+## 修改数据库
+
+
+```MYSQL
+
 ```
 
 ## 创建数据表
