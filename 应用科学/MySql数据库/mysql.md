@@ -2,7 +2,7 @@
 
 ## 创建数据库
 ```mysql
-CREATE DATABASE [IF NOT EXISTS] <`db_name`>;
+CREATE DATABASE [IF NOT EXISTS] <`db_name`> [[DEFAULT] CHARACTER SET <charset>] [[DEFAULT] COLLI];
 ```
 
 ## 创建数据表
