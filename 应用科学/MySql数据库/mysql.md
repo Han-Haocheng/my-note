@@ -57,12 +57,14 @@ USE <`db_name`>
 ```mysql
 
 ```
-## 创建数据表
+### 创建数据表
+
 ```mysql
 CREATE TABLE [IF NOT EXISTS] <`tb_name`>{
-  <`fiald_name`> <type> [NOT NULL] [UNIQUE] [PRIMARY KEY],
+  <`field_name`> <type> [NOT NULL] [UNIQUE] [PRIMARY KEY] [DEFAULT <def_val>] [AUTO_INCREMENT] [REFERENCES <`tb_name`.`field`>] [COMMENT <'comment'>],
   ...
-  [,PR]
+  [,[CONSTRAINT <pk_name>] PRIMARY KEY(<`field_name`>)]
+  [,FOREIGN KEY(``),...]
 }[ENGINE=<`engin_name`>];
 ```
 
