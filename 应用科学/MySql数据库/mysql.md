@@ -80,6 +80,7 @@ ALTER TABLE tbl_name
 
 ### 二、 列操作
 针对表中列的添加、修改、删除和重命名。
+alter table student change column name
 
 | 操作类型 | 语法格式 | 说明 |
 | :--- | :--- | :--- |
