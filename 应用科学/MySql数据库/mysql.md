@@ -80,17 +80,23 @@ ALTER TABLE tbl_name
 
 ### 二、 列操作
 针对表中列的添加、修改、删除和重命名。
-alter table student change column name
 
-| 操作类型 | 语法格式 | 说明 |
-| :--- | :--- | :--- |
-| **新增列** | `ADD [COLUMN] col_name column_definition [FIRST \| AFTER col_name]` | 添加单列，可指定位置。 |
-| | `ADD [COLUMN] (col_name column_definition,...)` | 添加多列。 |
-| **修改列** | `CHANGE [COLUMN] old_col_name new_col_name column_definition [FIRST \| AFTER col_name]` | **重命名**并修改列定义。 |
-| | `MODIFY [COLUMN] col_name column_definition [FIRST \| AFTER col_name]` | 仅修改列定义或位置，**不重命名**。 |
-| **列属性** | `ALTER [COLUMN] col_name { SET DEFAULT {literal \| (expr)} \| SET {VISIBLE \| INVISIBLE} \| DROP DEFAULT }` | 设置默认值、可见性或删除默认值。 |
-| **重命名列** | `RENAME COLUMN old_col_name TO new_col_name` | 仅重命名列。 |
-| **删除列** | `DROP [COLUMN] col_name` | 删除指定列。 |
+```mysql
+
+alter table student 
+	change column `name` `name` not null;
+
+```
+
+| 操作类型     | 语法格式                                                                                                        | 说明                  |
+| :------- | :---------------------------------------------------------------------------------------------------------- | :------------------ |
+| **新增列**  | `ADD [COLUMN] col_name column_definition [FIRST \| AFTER col_name]`                                         | 添加单列，可指定位置。         |
+|          | `ADD [COLUMN] (col_name column_definition,...)`                                                             | 添加多列。               |
+| **修改列**  | `CHANGE [COLUMN] old_col_name new_col_name column_definition [FIRST \| AFTER col_name]`                     | **重命名**并修改列定义。      |
+|          | `MODIFY [COLUMN] col_name column_definition [FIRST \| AFTER col_name]`                                      | 仅修改列定义或位置，**不重命名**。 |
+| **列属性**  | `ALTER [COLUMN] col_name { SET DEFAULT {literal \| (expr)} \| SET {VISIBLE \| INVISIBLE} \| DROP DEFAULT }` | 设置默认值、可见性或删除默认值。    |
+| **重命名列** | `RENAME COLUMN old_col_name TO new_col_name`                                                                | 仅重命名列。              |
+| **删除列**  | `DROP [COLUMN] col_name`                                                                                    | 删除指定列。              |
 
 ### 三、 索引与约束操作
 针对主键、索引、外键和检查约束的管理。
