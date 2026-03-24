@@ -68,10 +68,21 @@ CREATE TABLE [IF NOT EXISTS] <`tb_name`>{
 }[ENGINE=<`engin_name`>];
 ```
 
+完整性约束
+- `[NOT NULL]` 非空约束
+- `[UNIQUE]` 唯一约束
+
+键
+- `[PRIMARY KEY]` 主键
+
+`DEFAULT <def_val>`
+
 
 
 ---
 # 数据操作语句
+
+
 
 ---
 # 数据库管理语句
