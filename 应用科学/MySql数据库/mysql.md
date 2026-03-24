@@ -83,9 +83,6 @@ ALTER TABLE tbl_name
 
 ```mysql
 
-alter table student 
-	change column `name` `name` not null;
-
 ```
 
 | 操作类型     | 语法格式                                                                                                        | 说明                  |
