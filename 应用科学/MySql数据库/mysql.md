@@ -70,7 +70,6 @@ CREATE TABLE [IF NOT EXISTS] <`tb_name`>{
 
 ### 修改数据表
 
-### 一、 核心语法结构
 
 ```sql
 ALTER TABLE tbl_name
@@ -78,25 +77,44 @@ ALTER TABLE tbl_name
     [partition_options];
 ```
 
-### 二、 列操作
-针对表中列的添加、修改、删除和重命名。
+####  列操作
+
+列操作：针对表中列的添加、修改、删除和重命名。
+
+**新增列**
+
+- 添加单列，可指定位置
 
 ```mysql
-
+ADD [COLUMN] col_name column_definition [FIRST | AFTER col_name]
 ```
 
-| 操作类型     | 语法格式                                                                                                        | 说明                  |
-| :------- | :---------------------------------------------------------------------------------------------------------- | :------------------ |
-| **新增列**  | `ADD [COLUMN] col_name column_definition [FIRST \| AFTER col_name]`                                         | 添加单列，可指定位置。         |
-|          | `ADD [COLUMN] (col_name column_definition,...)`                                                             | 添加多列。               |
-| **修改列**  | `CHANGE [COLUMN] old_col_name new_col_name column_definition [FIRST \| AFTER col_name]`                     | **重命名**并修改列定义。      |
-|          | `MODIFY [COLUMN] col_name column_definition [FIRST \| AFTER col_name]`                                      | 仅修改列定义或位置，**不重命名**。 |
-| **列属性**  | `ALTER [COLUMN] col_name { SET DEFAULT {literal \| (expr)} \| SET {VISIBLE \| INVISIBLE} \| DROP DEFAULT }` | 设置默认值、可见性或删除默认值。    |
-| **重命名列** | `RENAME COLUMN old_col_name TO new_col_name`                                                                | 仅重命名列。              |
-| **删除列**  | `DROP [COLUMN] col_name`                                                                                    | 删除指定列。              |
+- 添加多列
+```mysql
+ADD [COLUMN] (col_name column_definition,...) 
+```
 
-### 三、 索引与约束操作
-针对主键、索引、外键和检查约束的管理。
+
+**修改列**
+
+- **重命名**并修改列定义。 
+
+```mysql
+CHANGE [COLUMN] old_col_name new_col_name column_definition [FIRST | AFTER col_name]
+```
+- 仅修改列定义或位置，**不重命名**
+```mysql
+MODIFY [COLUMN] col_name column_definition [FIRST | AFTER col_name]
+```
+
+| 操作类型     | 语法格式                                                                                                        | 说明               |
+| :------- | :---------------------------------------------------------------------------------------------------------- | :--------------- |
+| **列属性**  | `ALTER [COLUMN] col_name { SET DEFAULT {literal \| (expr)} \| SET {VISIBLE \| INVISIBLE} \| DROP DEFAULT }` | 设置默认值、可见性或删除默认值。 |
+| **重命名列** | `RENAME COLUMN old_col_name TO new_col_name`                                                                | 仅重命名列。           |
+| **删除列**  | `DROP [COLUMN] col_name`                                                                                    | 删除指定列。           |
+
+#### 索引与约束操作
+ 索引与约束操作：针对主键、索引、外键和检查约束的管理。
 
 | 操作类型 | 语法格式 | 说明 |
 | :--- | :--- | :--- |
@@ -115,8 +133,9 @@ ALTER TABLE tbl_name
 | | `ALTER INDEX index_name {VISIBLE \| INVISIBLE}` | 设置索引可见性。 |
 | **索引开关** | `{DISABLE \| ENABLE} KEYS` | 禁用或启用索引更新（MyISAM 特有）。 |
 
-### 四、 表属性与元数据
-修改表名、表空间、字符集及其他表级选项。
+#### 表属性与元数据
+
+表属性与元数据：修改表名、表空间、字符集及其他表级选项。
 
 | 操作类型 | 语法格式 | 说明 |
 | :--- | :--- | :--- |
@@ -129,8 +148,9 @@ ALTER TABLE tbl_name
 | | `ORDER BY col_name [, col_name] ...` | 对表进行排序存储（不影响查询顺序）。 |
 | | `{WITHOUT \| WITH} VALIDATION` | 配合分区操作使用。 |
 
-### 五、 分区操作
-针对分区表的管理操作。
+#### 分区操作
+
+分区操作：针对分区表的管理操作。
 ```sql
 partition_option: {
     ADD PARTITION (partition_definition)
@@ -149,10 +169,10 @@ partition_option: {
   | REMOVE PARTITIONING
 }
 ```
----
-### 六、 执行控制
 
-控制 ALTER 语句执行的算法和并发级别。
+#### 执行控制
+
+执行控制：控制 ALTER 语句执行的算法和并发级别。
 
 | 选项 | 语法 | 说明 |
 | :--- | :--- | :--- |
@@ -160,6 +180,7 @@ partition_option: {
 | **锁级别** | `LOCK [=] {DEFAULT \| NONE \| SHARED \| EXCLUSIVE}` | 指定并发控制锁级别（None 并发最高，Exclusive 阻塞最大）。 |
 
 ### 七、 关键定义细节
+
 #### 1. 索引部分定义 ( `key_part` )
 ```sql
 key_part: {col_name [(length)] | (expr)} [ASC | DESC]
