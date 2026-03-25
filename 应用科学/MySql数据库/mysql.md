@@ -5,7 +5,7 @@
 ### 数值类型
 
 
-TINYINT：很小整数，M 表示数值的位数，
+很小整数（TINYINT）：M 表示数值的位数，
  - 带符号的范围是-128～127，无符号的范围是 0～255。
 
 ```mysql
@@ -14,12 +14,46 @@ TINYINT[(M)] [UNSIGNED] [ZEROFILL]
  - `[UNSIGNED]`指定无符号正值；
  - `[ZEROFILL]`填充 0 。
 
+普通大小整数
+```mysql
+{INTEGER|INT} [(M)] [UNSIGNED] [ZEROFILL] 
+```
 
+浮点数
+```mysql
+DOUBLE[(M,D)] # 普通大小(双精度)
+FLOAT[(M,D)] # 小
+DECIMAL(M,D) # 自定义准确浮点数
 ```
-INT[(M)] 
+
+### 日期和时间类型
+
+日期型。支持的范围为’1000-01-01’到’9999-12-31‘’
+```mysql
+DATE
 ```
+
+时间型。范围是’ -838:59:59’到’838:59:59‘
+```mysql
+TIME
+```
+
+日期和时间的组合：支持的范围是’1000-01-01 00:00:00’到’9999-12-31 23:59:59‘’
+- 以’YYYY-MM-DD HH:MM:SS’格式显示DATETIME值
+```mysql
+DATETIME
+```
+
 
 # 数据定义语句
+
+## 基础信息查询
+
+查看字符集
+```mysql
+show variables like '%char%'
+```
+
 ## 数据库相关操作
 
 ### 创建数据库
@@ -47,13 +81,24 @@ SHOW { DATABASES | SCHEMAS };
 ```
 
 
+查看数据表（table）的 MySQL 字符集
+```mysql
+show table status from `sqlstudy_db` like '%cou%'
+```
+
+查看数据列（column）的 MySQL 字符集
+```mysql
+show full columns from countries;
+```
+
+
 ### 修改数据库
 
 更改数据库的全局特性
 - 必须具有对数据库进行修改的权限
 
 ```MYSQL
-ALTER { DATABASE | SCHEMA } [ db_name ] 
+ALTER { DATABASE | SCHEMA } [`db_name`] 
 	[[DEFAULT] CHARACTE SET [=] <`charset_name`>]
 	[[DEFAULT] COLLATE [=] <`collation_name`>];
 ```
@@ -63,10 +108,17 @@ ALTER { DATABASE | SCHEMA } [ db_name ]
 
 ### 删除数据库
 
-```Mysql
-DROP { DATABASE | SCHEMA } [ IF EXISTS ] db_name;
-```
+删除指定的整个数据库
 
+```Mysql
+DROP { DATABASE | SCHEMA } [ IF EXISTS ] `db_name`;
+```
+- `IF EXISTS` ：删除不存在的数据库时不出现错误信息
+
+
+## 数据表操作
+
+数据表：字段的集合，按照行和列的格式来存储，每一行代表一条记录，每一列代表记录中一个字段的取值
 
 ### 创建数据表
 
