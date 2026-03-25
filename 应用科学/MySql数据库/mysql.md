@@ -49,7 +49,8 @@ TIME
 DATETIME
 ```
 
-```
+
+```mysql
 TIMESTAMP[(M)]
 ```
 
