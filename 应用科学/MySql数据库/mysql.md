@@ -49,6 +49,9 @@ SHOW { DATABASES | SCHEMAS };
 
 ### 修改数据库
 
+更改数据库的全局特性
+- 必须具有对数据库进行修改的权限
+
 ```MYSQL
 ALTER { DATABASE | SCHEMA } [ db_name ] 
 	[DEFAULT] CHARACTE SET [ = ] charset_name
