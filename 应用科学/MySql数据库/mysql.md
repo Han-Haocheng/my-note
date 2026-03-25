@@ -11,8 +11,8 @@
 ```mysql
 TINYINT[(M)] [UNSIGNED] [ZEROFILL] 
 ```
- - `[UNSIGNED]`指定无符号正值；
- - `[ZEROFILL]`填充 0 。
+ - `[UNSIGNED]`指定无符号正值
+ - `[ZEROFILL]` 填充 0 。
 
 普通大小整数
 ```mysql
