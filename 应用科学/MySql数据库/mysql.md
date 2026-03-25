@@ -30,6 +30,23 @@ CREATE { DATABASE | SCHEMA } [IF NOT EXISTS] <`db_name`>
 	[[DEFAULT] COLLATE [=] <collate_>];
 ```
 
+
+### 使用数据库
+
+```mysql
+USE <`db_name`>
+```
+
+### 查询数据库
+
+查看当前可用的数据库列表
+- 只会列出当前用户权限范围内所能查看到的数据库名称
+
+```mysql
+SHOW { DATABASES | SCHEMAS };
+```
+
+
 ### 修改数据库
 
 ```MYSQL
@@ -44,21 +61,7 @@ ALTER { DATABASE | SCHEMA } [ db_name ]
 DROP { DATABASE | SCHEMA } [ IF EXISTS ] db_name;
 ```
 
-### 使用数据库
 
-```mysql
-USE <`db_name`>
-```
-
-
-### 查询数据库
-
-查看当前可用的数据库列表
-- 只会列出当前用户权限范围内所能查看到的数据库名称
-
-```mysql
-SHOW { DATABASES | SCHEMAS };
-```
 ### 创建数据表
 
 ```mysql
