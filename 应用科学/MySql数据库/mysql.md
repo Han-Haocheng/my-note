@@ -57,6 +57,8 @@ ALTER { DATABASE | SCHEMA } [ db_name ]
 	[DEFAULT] CHARACTE SET [ = ] charset_name
 	[DEFAULT] COLLATE [ = ] collation name;
 ```
+- `[CHARACTER SET]` 字符集
+
 
 ### 删除数据库
 
