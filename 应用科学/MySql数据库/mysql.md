@@ -19,16 +19,17 @@ TINYINT[(M)] [UNSIGNED] [ZEROFILL]
 INT[(M)] 
 ```
 
-## 数据定义语句
+# 数据定义语句
 
-
-### 创建数据库
+## 创建数据库
 
 ```mysql
 CREATE { DATABASE | SCHEMA } [IF NOT EXISTS] <`db_name`> 
 	[[DEFAULT] CHARACTER SET <charset>] 
 	[[DEFAULT] COLLATE [=] <collate_>];
 ```
+
+### 查看数据库
 
 
 ### 修改数据库
@@ -83,55 +84,63 @@ ALTER TABLE tbl_name
 
 **新增列**
 
-- 添加单列，可指定位置
+- 
 
 ```mysql
+-- 添加单列，可指定位置
 ADD [COLUMN] col_name column_definition [FIRST | AFTER col_name]
-```
 
-- 添加多列
-```mysql
+-- 添加多列
 ADD [COLUMN] (col_name column_definition,...) 
 ```
 
 
 **修改列**
 
-- **重命名**并修改列定义。 
-
 ```mysql
+-- **重命名**并修改列定义。 
 CHANGE [COLUMN] old_col_name new_col_name column_definition [FIRST | AFTER col_name]
-```
-- 仅修改列定义或位置，**不重命名**
-```mysql
+
+-- 仅修改列定义或位置，**不重命名**
 MODIFY [COLUMN] col_name column_definition [FIRST | AFTER col_name]
 ```
 
-| 操作类型     | 语法格式                                                                                                        | 说明               |
-| :------- | :---------------------------------------------------------------------------------------------------------- | :--------------- |
-| **列属性**  | `ALTER [COLUMN] col_name { SET DEFAULT {literal \| (expr)} \| SET {VISIBLE \| INVISIBLE} \| DROP DEFAULT }` | 设置默认值、可见性或删除默认值。 |
-| **重命名列** | `RENAME COLUMN old_col_name TO new_col_name`                                                                | 仅重命名列。           |
-| **删除列**  | `DROP [COLUMN] col_name`                                                                                    | 删除指定列。           |
+**列属性**：设置默认值、可见性或删除默认值。
+```mysql
+ALTER [COLUMN] col_name { SET DEFAULT {literal | (expr)} | SET {VISIBLE | INVISIBLE} | DROP DEFAULT }
+```
+
+**重命名列**：仅重命名列。
+```mysql
+RENAME COLUMN old_col_name TO new_col_name
+```
+
+**删除列**：删除指定列。
+
+```mysql
+DROP [COLUMN] col_name
+```
 
 #### 索引与约束操作
+
  索引与约束操作：针对主键、索引、外键和检查约束的管理。
 
-| 操作类型 | 语法格式 | 说明 |
-| :--- | :--- | :--- |
-| **主键** | `ADD [CONSTRAINT [symbol]] PRIMARY KEY [index_type] (key_part,...)` | 添加主键。 |
-| | `DROP PRIMARY KEY` | 删除主键。 |
-| **唯一索引** | `ADD [CONSTRAINT [symbol]] UNIQUE [INDEX \| KEY] [index_name] ...` | 添加唯一约束/索引。 |
-| **普通索引** | `ADD {INDEX \| KEY} [index_name] [index_type] (key_part,...)` | 添加普通索引。 |
-| **特殊索引** | `ADD {FULLTEXT \| SPATIAL} [INDEX \| KEY] ...` | 添加全文索引或空间索引。 |
-| **外键** | `ADD [CONSTRAINT [symbol]] FOREIGN KEY [index_name] ...` | 添加外键约束。 |
-| | `DROP FOREIGN KEY fk_symbol` | 删除外键。 |
-| **检查约束** | `ADD [CONSTRAINT [symbol]] CHECK (expr) [[NOT] ENFORCED]` | 添加 CHECK 约束。 |
-| | `DROP {CHECK \| CONSTRAINT} symbol` | 删除约束。 |
-| | `ALTER {CHECK \| CONSTRAINT} symbol [NOT] ENFORCED` | 启用/禁用约束检查。 |
-| **索引管理** | `DROP {INDEX \| KEY} index_name` | 删除索引。 |
-| | `RENAME {INDEX \| KEY} old_index_name TO new_index_name` | 重命名索引。 |
-| | `ALTER INDEX index_name {VISIBLE \| INVISIBLE}` | 设置索引可见性。 |
-| **索引开关** | `{DISABLE \| ENABLE} KEYS` | 禁用或启用索引更新（MyISAM 特有）。 |
+| 操作类型     | 语法格式                                                                                                   | 说明                    |
+| :------- | :----------------------------------------------------------------------------------------------------- | :-------------------- |
+| **主键**   | `ADD [CONSTRAINT [symbol]] PRIMARY KEY [index_type] ({col_name [(length)]\| (expr)} [ASC\| DESC],...)` | 添加主键。                 |
+|          | `DROP PRIMARY KEY`                                                                                     | 删除主键。                 |
+| **唯一索引** | `ADD [CONSTRAINT [symbol]] UNIQUE [INDEX \| KEY] [index_name] ...`                                     | 添加唯一约束/索引。            |
+| **普通索引** | `ADD {INDEX \| KEY} [index_name] [index_type] ({col_name [(length)]\| (expr)} [ASC\| DESC],...)`       | 添加普通索引。               |
+| **特殊索引** | `ADD {FULLTEXT \| SPATIAL} [INDEX \| KEY] ...`                                                         | 添加全文索引或空间索引。          |
+| **外键**   | `ADD [CONSTRAINT [symbol]] FOREIGN KEY [index_name] ...`                                               | 添加外键约束。               |
+|          | `DROP FOREIGN KEY fk_symbol`                                                                           | 删除外键。                 |
+| **检查约束** | `ADD [CONSTRAINT [symbol]] CHECK (expr) [[NOT] ENFORCED]`                                              | 添加 CHECK 约束。          |
+|          | `DROP {CHECK \| CONSTRAINT} symbol`                                                                    | 删除约束。                 |
+|          | `ALTER {CHECK \| CONSTRAINT} symbol [NOT] ENFORCED`                                                    | 启用/禁用约束检查。            |
+| **索引管理** | `DROP {INDEX \| KEY} index_name`                                                                       | 删除索引。                 |
+|          | `RENAME {INDEX \| KEY} old_index_name TO new_index_name`                                               | 重命名索引。                |
+|          | `ALTER INDEX index_name {VISIBLE \| INVISIBLE}`                                                        | 设置索引可见性。              |
+| **索引开关** | `{DISABLE \| ENABLE} KEYS`                                                                             | 禁用或启用索引更新（MyISAM 特有）。 |
 
 #### 表属性与元数据
 
