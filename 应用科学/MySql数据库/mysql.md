@@ -20,17 +20,15 @@ INT[(M)]
 ```
 
 # 数据定义语句
+## 数据库相关操作
 
-## 创建数据库
+### 创建数据库
 
 ```mysql
 CREATE { DATABASE | SCHEMA } [IF NOT EXISTS] <`db_name`> 
 	[[DEFAULT] CHARACTER SET <charset>] 
 	[[DEFAULT] COLLATE [=] <collate_>];
 ```
-
-### 查看数据库
-
 
 ### 修改数据库
 
@@ -53,7 +51,7 @@ USE <`db_name`>
 ```
 
 
-### 展示信息
+### 查询数据库
 
 ```mysql
 
