@@ -55,10 +55,10 @@ SHOW { DATABASES | SCHEMAS };
 ```MYSQL
 ALTER { DATABASE | SCHEMA } [ db_name ] 
 	[[DEFAULT] CHARACTE SET [=] <`charset_name`>]
-	[[DEFAULT] COLLATE [=] collation <`name`>];
+	[[DEFAULT] COLLATE [=] <`collation_name`>];
 ```
-- `[DEFAULT] CHARACTE SET [=] <` charset_name `>` ：可选项，设置字符集
-- ``
+- ``[DEFAULT] CHARACTE SET [=] <`charset_name `>`` ：可选项，设置字符集
+- ``[DEFAULT] COLLATE [=] collation <`collation_name `>`` ：可选项，设置校对规则
 
 
 ### 删除数据库
