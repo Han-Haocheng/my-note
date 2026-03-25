@@ -61,7 +61,7 @@ TIMESTAMP[(M)]
 - 以YYYY格式显示YEAR值
 - 允许使用字符串或数字为YEAR列分配值
 
-```
+```mysql
 YEAR[(2|4)]
 ```
 # 数据定义语句
