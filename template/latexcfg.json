@@ -77,9 +77,9 @@
     
     // Insert space after greek letters and symbols, etc
     {"trigger": "\\\\(${GREEK}|${SYMBOL}|${SHORT_SYMBOL})([A-Za-z])", "replacement": "\\[[0]] [[1]]", "options": "rmA"},
-    {"trigger": "\\\\(${GREEK}|${SYMBOL}) sr", "replacement": "\\[[0]]^{2}", "options": "rmA"},
-    {"trigger": "\\\\(${GREEK}|${SYMBOL}) cb", "replacement": "\\[[0]]^{3}", "options": "rmA"},
-    {"trigger": "\\\\(${GREEK}|${SYMBOL}) rd", "replacement": "\\[[0]]^{$0}$1", "options": "rmA"},
+    {"trigger": "\\\\(${GREEK}|${SYMBOL}) pf", "replacement": "\\[[0]]^{2}", "options": "rmA"},
+    {"trigger": "\\\\(${GREEK}|${SYMBOL}) lf", "replacement": "\\[[0]]^{3}", "options": "rmA"},
+    {"trigger": "\\\\(${GREEK}|${SYMBOL}) cf", "replacement": "\\[[0]]^{$0}$1", "options": "rmA"},
     {"trigger": "\\\\(${GREEK}|${SYMBOL}) hat", "replacement": "\\hat{\\[[0]]}", "options": "rmA"},
     {"trigger": "\\\\(${GREEK}|${SYMBOL}) dot", "replacement": "\\dot{\\[[0]]}", "options": "rmA"},
     {"trigger": "\\\\(${GREEK}|${SYMBOL}) bar", "replacement": "\\bar{\\[[0]]}", "options": "rmA"},
@@ -95,9 +95,9 @@
     {"trigger": "te", "replacement": "\\text{$0}", "options": "m"},
     {"trigger": "text", "replacement": "\\text{$0}", "options": "mA"},
     {"trigger": "bf", "replacement": "\\mathbf{$0}", "options": "mA"},
-    {"trigger": "sr", "replacement": "^{2}", "options": "mA"},
-    {"trigger": "cb", "replacement": "^{3}", "options": "mA"},
-    {"trigger": "rd", "replacement": "^{$0}$1", "options": "mA"},
+    {"trigger": "pf", "replacement": "^{2}", "options": "mA"},
+    {"trigger": "lf", "replacement": "^{3}", "options": "mA"},
+    {"trigger": "cf", "replacement": "^{$0}$1", "options": "mA"},
     {"trigger": "_", "replacement": "_{$0}$1", "options": "mA"},
     {"trigger": "sts", "replacement": "_\\text{$0}", "options": "rmA"},
     {"trigger": "sq", "replacement": "\\sqrt{ $1 }$2", "options": "mA"},
@@ -302,12 +302,12 @@
     {"trigger": "bmat", "replacement": "\\begin{bmatrix}$0\\end{bmatrix}", "options": "nA"},
     {"trigger": "Bmat", "replacement": "\\begin{Bmatrix}$0\\end{Bmatrix}", "options": "nA"},
     {"trigger": "vmat", "replacement": "\\begin{vmatrix}$0\\end{vmatrix}", "options": "nA"},
-    {"trigger": "jz", "replacement": "\\begin{vmatrix}$0\\end{vmatrix}", "options": "nA"},
+    {"trigger": "jz", "replacement": "\\begin{pmatrix}$0\\end{pmatrix}", "options": "nA"},
     {"trigger": "Vmat", "replacement": "\\begin{Vmatrix}$0\\end{Vmatrix}", "options": "nA"},
     {"trigger": "matrix", "replacement": "\\begin{matrix}$0\\end{matrix}", "options": "nA"},
-    {"trigger": "case", "replacement": "\\begin{cases}\n$0\n\\end{cases}", "options": "mA"},
-    {"trigger": "align", "replacement": "\\begin{align}\n$0\n\\end{align}", "options": "mA"},
-    {"trigger": "array", "replacement": "\\begin{array}\n$0\n\\end{array}", "options": "mA"},
+    {"trigger": "case", "replacement": "\\begin{cases}$0\n\\end{cases}", "options": "mA"},
+    {"trigger": "align", "replacement": "\\begin{align}$0\n\\end{align}", "options": "mA"},
+    {"trigger": "array", "replacement": "\\begin{array}$0\n\\end{array}", "options": "mA"},
 
 
     // Brackets
