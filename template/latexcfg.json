@@ -21,6 +21,7 @@
     {"trigger":"kk","replacement":"\\mathbf{k}", "options": "mA"},
     {"trigger":"bec","replacement":"\\because", "options": "mA"},
     {"trigger":"thf","replacement":"\\therefore", "options": "mA"},
+    {"trigger":"ni","replacement":"^{-1}", "options": "mA"},
 
     {"trigger":"ln","replacement":"\\ln{$0}$1", "options": "mA"},
     {"trigger":"log","replacement":"\\log_{$0}{$1}$2", "options": "mA"},
