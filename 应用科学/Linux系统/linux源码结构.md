@@ -32,6 +32,6 @@ Makefile
 ```tree
 etc\
 	shadow
-	passwd // 用户管理文件 
-
+	passwd // 系统所有用户信息 
+	group  // 系统所有组信息
 ```
