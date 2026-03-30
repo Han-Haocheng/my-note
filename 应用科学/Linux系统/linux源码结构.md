@@ -24,6 +24,14 @@ fs\
 	truncate.c
 include\
 	asm\
-	
 Makefile
+```
+
+
+
+```tree
+etc\
+	shadow
+	passwd // 用户管理文件 
+
 ```
