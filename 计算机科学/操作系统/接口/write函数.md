@@ -1,8 +1,8 @@
-## write函数
+# write函数
 
 ![[计算机科学/操作系统/attachments/20250624170514.svg]]
 
-### 创建write函数
+## 创建write函数
 
 文件：linux/lib/write.c
 
@@ -33,8 +33,6 @@ int write(int fd,const char* buf,off_t count){
 	long __res;
 	__asm__ volatile("int 0x80":"=a"(__res):""(__NR_write),
 		"b"((long)(fd)),"c"((long)(buf)),"d"((long)(count)));
-
-	
 	if(__res>=0) 
 		return (int)__res;
 	errno=-__res;
@@ -43,6 +41,7 @@ int write(int fd,const char* buf,off_t count){
 ```
 
 asm展开
+
 ```asm
 mov __NR_write,%eax
 mov fd,%ebx
@@ -51,9 +50,10 @@ mov count,%edx
 int 0x80
 ```
 
-### 初始化中断向量
+## 初始化中断向量
 
 kernel/sched.c
+
 ```c
 void sched_init(void){
 	int i;
@@ -87,7 +87,7 @@ void sched_init(void){
 }
 ```
 
-中断设置宏
+### 中断设置宏
 
 ```c
 #define set_system_gate(n,addr)\
@@ -136,7 +136,7 @@ movl %edx,idt+0x80*8+4
 | ------ | ------------ | --- | --- | --- | ---- |
 | 0x0008 | &system_call | 1   | 11  | 1   | 1111 |
 
-### 系统中断调用
+## 系统中断调用
 
 linux/kernel/system_call.s
 
@@ -165,7 +165,7 @@ ret_from_sys_call:
 	...
 ```
 
-### 系统中断调用表
+## 系统中断调用表
 
 include/linux/sched.h
 
