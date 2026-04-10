@@ -1,6 +1,6 @@
 [
    // 数学模式
-    {"trigger": "mk", "replacement": "$$0$", "options": "tA"},
+    {"trigger": "mk", "replacement": "$${0: }$", "options": "tA"},
     {"trigger": "jz", "replacement": "^[$0]", "options": "tA"},
     {"trigger": "dm", "replacement": "$$\n$0\n$$", "options": "tAw"},
     {"trigger": "beg", "replacement": "\\begin{$0}\n$1\n\\end{$0}", "options": "mA"},
@@ -11,8 +11,8 @@
     // {"trigger": "—-", "replacement": "---", "options": "tA"},
 
     //自己定义
-    {"trigger":"vec","replacement":"\\vec{$0}$1", "options": "mA"},
-    {"trigger":"Vec","replacement":"\\overrightarrow{$0}$1", "options": "mA"},
+    {"trigger":"xl","replacement":"\\vec{$0}$1", "options": "mA"},
+    {"trigger":"XL","replacement":"\\overrightarrow{$0}$1", "options": "mA"},
     {"trigger":"px","replacement":"\\mathrel{/\\negmedspace/}$0", "options": "mA"},
     {"trigger":"ji","replacement":"\\angle $0", "options": "mA"},
     {"trigger":"zbxl","replacement":"${0:x}\\mathbf{i}+${1:y}\\mathbf{j}+${2:z}\\mathbf{k}$3", "options": "mA"},
