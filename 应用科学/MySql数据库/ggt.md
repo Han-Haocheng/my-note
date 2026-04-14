@@ -1,18 +1,6 @@
-升序排序（不写为默认）
-```mysql
-mysql> SELECT studentNO,studentName,sex FROM tb_student ORDER BY sex;
-```
-降序排序
-```mysql
-mysql> SELECT studentNO,studentName,sex FROM tb_student ORDER BY sex DESC;
-``` 
-
-注意：当对空值进行排序时，ORDER BY子句会将该空值作为最小值来对待。
-
-### 限制查询结果的数量
- 当使用SELECT语句返回的结果集中行数很多时，为了便于用户对查向结果集进行浏览和操作，可以使用LIMIT子句来限制SELECT语句返回的行数(界限)。
- LIMIT子句的语法格式是：
-```mysql
-LIMIT [初始位置,] 行数
-``` 
-
+对于GROUP BY子句的使用，需要注意以下几点：
+（1）GROUP BY子句中分组字段列表中的每个字段都必须是SELECT子句查询列或有效的表达式，但不能是聚合函数。
+ 如果在SELECT子句中使用表达式，则必须在GROUP BY子句中指定相同的表达式，不能使用别名。
+（2）除聚合函数之外，SELECT子句中的每个查询列都必须在GROUP BY子句中给出。
+（3）如果用于分组的列中含有NULL值，则NULL将作为一个单独的组返回；
+ 如果该列中存在多个NULL值，则将这些NULL值所在的行包含在同一组。
