@@ -5,7 +5,7 @@ passwd [选项] [登录名]
 选项：d  
  -a, --all                     报告所有帐户的密码状态  
  -d, --delete                  删除指定帐户的密码  
- -e, --expire                  强制使指定帐户的密码过期i  
+ -e, --expire                  强制使指定帐户的密码过期
  -h, --help                    显示此帮助信息并退出  
  -k, --keep-tokens             仅在过期后修改密码  
  -i, --inactive INACTIVE       密码过期后设置密码不活动为 INACTIVE  
