@@ -10,3 +10,4 @@ views:
       or:
         - file.ext.contains("ppt")
         - file.ext.contains("doc")
+        - file.ext.contains("x")
