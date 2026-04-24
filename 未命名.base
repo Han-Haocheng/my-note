@@ -7,5 +7,5 @@ views:
   - type: table
     name: 表格
     filters:
-      and:
-        - file.hasLink(".ppt")
+      or:
+        - file.ext.contains("ppt")
