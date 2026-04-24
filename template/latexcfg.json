@@ -11,18 +11,19 @@
     // {"trigger": "—-", "replacement": "---", "options": "tA"},
 
     //自己定义
-    {"trigger":"xll","replacement":"\\vec{$0}$1", "options": "mA"}, // 向量
-    {"trigger":"\\vec{}l","replacement":"\\overrightarrow{$0}$1", "options": "mA"}, // 长向量
-    {"trigger":"XL","replacement":"\\overrightarrow{$0}$1", "options": "mA"}, // 向量
+    // {"trigger":"xl","replacement":"\\vec{$0}$1", "options": "mA"}, // 向量
+    //{"trigger":"\\vec{}l","replacement":"\\overrightarrow{$0}$1", "options": "mA"}, // 长向量
+    {"trigger":"xlz","replacement":"${0:\\alpha}_{1},${0:\\alpha}_{2},...,${0:\\alpha}_{${1:s}}", "options": "mA"}, // 向量
     {"trigger":"jiao","replacement":"\\angle $0", "options": "mA"},//角
 
-    {"trigger":"px","replacement":"\\mathrel{/\\negmedspace/}$0", "options": "mA"},
+    {"trigger":"bec","replacement":"\\because", "options": "mA"}, // 因为
+    {"trigger":"thf","replacement":"\\therefore", "options": "mA"}, //所以
+    // {"trigger":"px","replacement":"\\mathrel{/\\negmedspace/}$0", "options": "mA"},
+
     {"trigger":"zbxl","replacement":"${0:x}\\mathbf{i}+${1:y}\\mathbf{j}+${2:z}\\mathbf{k}$3", "options": "mA"},//向量
     {"trigger":"ii","replacement":"\\mathbf{i}", "options": "mA"},// 分向量i
     {"trigger":"jj","replacement":"\\mathbf{j}", "options": "mA"},// 分向量j
     {"trigger":"kk","replacement":"\\mathbf{k}", "options": "mA"},// 分向量k
-    {"trigger":"bec","replacement":"\\because", "options": "mA"}, // 因为
-    {"trigger":"thf","replacement":"\\therefore", "options": "mA"}, //所以
     {"trigger":"ni","replacement":"^{-1}", "options": "mA"},// 逆
     {"trigger":"zz","replacement":"^{T}", "options": "mA"},// 转置
 
@@ -312,7 +313,7 @@
     {"trigger": "jz", "replacement": "\\begin{pmatrix}$0\\end{pmatrix}", "options": "nA"}, // 矩阵
     {"trigger": "Vmat", "replacement": "\\begin{Vmatrix}$0\\end{Vmatrix}", "options": "nA"},
     {"trigger": "matrix", "replacement": "\\begin{matrix}$0\\end{matrix}", "options": "nA"},
-    {"trigger": "case", "replacement": "\\begin{cases}$0\\end{cases}", "options": "mA"},
+    {"trigger": "case", "replacement": "\\begin{cases}$0\\end{cases}", "options": "mA"}, // 大括号
     {"trigger": "align", "replacement": "\\begin{align}$0\\end{align}", "options": "mA"},
     {"trigger": "array", "replacement": "\\begin{array}$0\\end{array}", "options": "mA"},
 
