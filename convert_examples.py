@@ -27,7 +27,7 @@ for line in content:
             in_example = True
             current_example = [line.strip()]
         # 匹配直接以数学表达式开头的例题
-        elif re.match(r'^\$\int', line.strip()):
+        elif line.strip().startswith('$\int'):
             in_example = True
             current_example = [line.strip()]
         else:
