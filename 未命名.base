@@ -9,3 +9,4 @@ views:
     filters:
       or:
         - file.ext.contains("ppt")
+        - file.ext.contains("doc")
