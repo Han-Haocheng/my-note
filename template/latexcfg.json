@@ -11,14 +11,16 @@
     // {"trigger": "—-", "replacement": "---", "options": "tA"},
 
     //自己定义
-    {"trigger":"xl","replacement":"\\vec{$0}$1", "options": "mA"},
-    {"trigger":"XL","replacement":"\\overrightarrow{$0}$1", "options": "mA"},
+    {"trigger":"xl","replacement":"\\vec{$0}$1", "options": "mA"}, // 向量
+    {"trigger":"\\vec{}l","replacement":"\\overrightarrow{$0}$1", "options": "mA"}, // 向量
+    {"trigger":"XL","replacement":"\\overrightarrow{$0}$1", "options": "mA"}, // 向量
+    {"trigger":"jiao","replacement":"\\angle $0", "options": "mA"},//角
+
     {"trigger":"px","replacement":"\\mathrel{/\\negmedspace/}$0", "options": "mA"},
-    {"trigger":"ji","replacement":"\\angle $0", "options": "mA"},
-    {"trigger":"zbxl","replacement":"${0:x}\\mathbf{i}+${1:y}\\mathbf{j}+${2:z}\\mathbf{k}$3", "options": "mA"},
-    {"trigger":"ii","replacement":"\\mathbf{i}", "options": "mA"},
-    {"trigger":"jj","replacement":"\\mathbf{j}", "options": "mA"},
-    {"trigger":"kk","replacement":"\\mathbf{k}", "options": "mA"},
+    {"trigger":"zbxl","replacement":"${0:x}\\mathbf{i}+${1:y}\\mathbf{j}+${2:z}\\mathbf{k}$3", "options": "mA"},//向量
+    {"trigger":"ii","replacement":"\\mathbf{i}", "options": "mA"},// 分向量i
+    {"trigger":"jj","replacement":"\\mathbf{j}", "options": "mA"},// 分向量j
+    {"trigger":"kk","replacement":"\\mathbf{k}", "options": "mA"},// 分向量k
     {"trigger":"bec","replacement":"\\because", "options": "mA"}, // 因为
     {"trigger":"thf","replacement":"\\therefore", "options": "mA"}, //所以
     {"trigger":"ni","replacement":"^{-1}", "options": "mA"},// 逆
@@ -28,10 +30,9 @@
     {"trigger":"log","replacement":"\\log_{$0}{$1}$2", "options": "mA"},
 
     
-    {"trigger":"\\equiv=","replacement":"\\xlongequal{$0}$1", "options": "mA"},
-    {"trigger":"====","replacement":"\\xlongequal{$0}$1", "options": "mA"},
+    {"trigger":"\\equiv=","replacement":"\\xlongequal{$0}$1", "options": "mA"}, // 长
     
-    // Greek letters
+    // 希腊字母
     {"trigger": "@a", "replacement": "\\alpha", "options": "mA"},
     {"trigger": "@A", "replacement": "\\alpha", "options": "mA"},
     {"trigger": "@b", "replacement": "\\beta", "options": "mA"},
@@ -77,7 +78,7 @@
 
 
     
-    // Insert space after greek letters and symbols, etc
+    // 在希腊字母和符号等后面插入空格
     {"trigger": "\\\\(${GREEK}|${SYMBOL}|${SHORT_SYMBOL})([A-Za-z])", "replacement": "\\[[0]] [[1]]", "options": "rmA"},
     {"trigger": "\\\\(${GREEK}|${SYMBOL}) pf", "replacement": "\\[[0]]^{2}", "options": "rmA"},
     {"trigger": "\\\\(${GREEK}|${SYMBOL}) lf", "replacement": "\\[[0]]^{3}", "options": "rmA"},
@@ -93,7 +94,7 @@
     {"trigger": "\\\\(${GREEK}|${SYMBOL})qz", "replacement": "\\left.\\[[0]]\\right\\|_{$0}", "options": "rmA"},
 
     
-    // Operations
+    // 操作符号
     {"trigger": "te", "replacement": "\\text{$0}", "options": "m"},
     {"trigger": "text", "replacement": "\\text{$0}", "options": "mA"},
     {"trigger": "bf", "replacement": "\\mathbf{$0}", "options": "mA"},
@@ -337,8 +338,10 @@
     {"trigger": "qz", "replacement": "\\left.$0\\right|_{$1}", "options": "mA"},
 
     // Misc
+    // 泰勒展开
     {"trigger": "tayl", "replacement": "${0:f}(${1:x} + ${2:h}) = ${0:f}(${1:x}) + ${0:f}'(${1:x})${2:h} + ${0:f}''(${1:x}) \\frac{${2:h}^{2}}{2!} + \\dots$3", "options": "mA"},
-    {"trigger": /iden(\d)/, "replacement": (match) => {
+    // 单位矩阵
+    {"trigger": /dwjz(\d)/, "replacement": (match) => {
         const n = match[1];
 
         let arr = [];
