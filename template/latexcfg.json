@@ -11,8 +11,8 @@
     // {"trigger": "—-", "replacement": "---", "options": "tA"},
 
     //自己定义
-    {"trigger":"xl","replacement":"\\vec{$0}$1", "options": "mA"}, // 向量
-    {"trigger":"\\vec{}l","replacement":"\\overrightarrow{$0}$1", "options": "mA"}, // 向量
+    {"trigger":"xll","replacement":"\\vec{$0}$1", "options": "mA"}, // 向量
+    {"trigger":"\\vec{}l","replacement":"\\overrightarrow{$0}$1", "options": "mA"}, // 长向量
     {"trigger":"XL","replacement":"\\overrightarrow{$0}$1", "options": "mA"}, // 向量
     {"trigger":"jiao","replacement":"\\angle $0", "options": "mA"},//角
 
@@ -230,29 +230,30 @@
     {"trigger": "ORANGE", "replacement": "{\\color{Orange}$0}$1", "options": "mA"},
     {"trigger": "GREEN", "replacement": "{\\color{Green}$0}$1", "options": "mA"},
     
-    // Unit vectors
-    {"trigger": ":i", "replacement": "\\mathbf{i}", "options": "mA"},
-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options": "mA"},
-    {"trigger": ":k", "replacement": "\\mathbf{k}", "options": "mA"},
+    // 单位向量 Unit vectors
+    //{"trigger": ":i", "replacement": "\\mathbf{i}", "options": "mA"},
+    //{"trigger": ":j", "replacement": "\\mathbf{j}", "options": "mA"},
+    //{"trigger": ":k", "replacement": "\\mathbf{k}", "options": "mA"},
     {"trigger": ":x", "replacement": "\\hat{\\mathbf{x}}", "options": "mA"},
     {"trigger": ":y", "replacement": "\\hat{\\mathbf{y}}", "options": "mA"},
     {"trigger": ":z", "replacement": "\\hat{\\mathbf{z}}", "options": "mA"},
 
 
-    // Derivatives
-    {"trigger": "pds", "replacement": "\\frac{ \\partial ${0:z} }{ \\partial ${1:x} } $2", "options": "mA"},
+    // 偏导数
+    {"trigger": "pds", "replacement": "\\frac{ \\partial ${0:z} }{ \\partial ${1:x} } $2", "options": "mA"}, 
+    // 二次偏导数
     {"trigger": "pd2", "replacement": "\\frac{ \\partial^{2} ${0:y} }{ \\partial ${1:x}^{2} } $2", "options": "mA"},
-    {"trigger": "pd3", "replacement": "\\frac{ \\partial^{3} ${0:y} }{ \\partial ${1:x}^{3} } $2", "options": "mA"},
     {"trigger": "pd([A-Za-z])([A-Za-z])", "replacement": "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", "options": "rm"},
     {"trigger": "pd([A-Za-z])([A-Za-z])([A-Za-z])", "replacement": "\\frac{ \\partial^{2} [[0]] }{ \\partial [[1]] \\partial [[2]] } ", "options": "rm"},
     {"trigger": "pd([A-Za-z])([A-Za-z])2", "replacement": "\\frac{ \\partial^{2} [[0]] }{ \\partial [[1]]^{2} } ", "options": "rmA"},
+    // 导数
     {"trigger":"ds","replacement":"\\frac{\\mathrm{d} ${0:y}}{\\mathrm{d} ${1:x}}", "options": "mA"},
     {"trigger": "ds([A-Za-z])([A-Za-z])", "replacement": "\\frac{ d[[0]] }{ d[[1]] } ", "options": "rm"},
     {"trigger": "ds([A-Za-z])([A-Za-z])2", "replacement": "\\frac{ d^{2}[[0]] }{ d[[1]]^{2} } ", "options": "rmA"},
-    {"trigger": "ddt", "replacement": "\\frac{d}{dt} ", "options": "mA"},
+    {"trigger": "ddt", "replacement": "\\frac{d}{dt}() ", "options": "mA"},
 
 
-    // Integrals
+    // 积分
     {"trigger": "oinf", "replacement": "\\int_{0}^{\\infty} $0 \\, \\mathrm{d}${1:x} $2", "options": "mA"},
     {"trigger": "infi", "replacement": "\\int_{-\\infty}^{\\infty} $0 \\, \\mathrm{d}${1:x} $2", "options": "mA"},
     {"trigger": "dint", "replacement": "\\int_{${0:0}}^{${1:\\infty}} $2 \\, \\mathrm{d}${3:x} $4", "options": "mA"},
@@ -266,7 +267,7 @@
     {"trigger": "grad", "replacement": "\\mathrm{grad}$0", "options": "mA"},
 
 
-    // Physics
+    // 物理
     {"trigger": "kbt", "replacement": "k_{B}T", "options": "mA"},
 
 
