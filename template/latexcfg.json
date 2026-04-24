@@ -147,7 +147,7 @@
     {"trigger": "\\\\(neq|geq|leq|gg|ll|sim)([0-9]+)", "replacement": "\\[[0]] [[1]]", "options": "rmA"}, // Insert space after inequality symbols
 
 
-    // Visual operations
+    // 虚操作
     {"trigger": "U", "replacement": "\\underbrace{ ${VISUAL} }_{ $0 }", "options": "mA"},
     {"trigger": "O", "replacement": "\\overbrace{ ${VISUAL} }^{ $0 }", "options": "mA"},
     {"trigger": "B", "replacement": "\\underset{ $0 }{ ${VISUAL} }", "options": "mA"},
@@ -295,25 +295,26 @@
     {"trigger": "hel3", "replacement": "{}^{3}_{2}He ", "options": "mA"},
 
 
-    // Environments
-    {"trigger": "pmat", "replacement": "\\begin{pmatrix}\n$0\n\\end{pmatrix}", "options": "MA"},
+    // 环境
+    //{"trigger": "pmat", "replacement": "\\begin{pmatrix}\n$0\n\\end{pmatrix}", "options": "MA"},
     {"trigger": "bmat", "replacement": "\\begin{bmatrix}\n$0\n\\end{bmatrix}", "options": "MA"},
     {"trigger": "Bmat", "replacement": "\\begin{Bmatrix}\n$0\n\\end{Bmatrix}", "options": "MA"},
     {"trigger": "vmat", "replacement": "\\begin{vmatrix}\n$0\n\\end{vmatrix}", "options": "MA"},
-    {"trigger": "hls", "replacement": "\\begin{vmatrix}\n$0\n\\end{vmatrix}", "options": "MA"},
+    {"trigger": "hls", "replacement": "\\begin{vmatrix}\n$0\n\\end{vmatrix}", "options": "MA"}, // 行列式
     {"trigger": "Vmat", "replacement": "\\begin{Vmatrix}\n$0\n\\end{Vmatrix}", "options": "MA"},
     {"trigger": "matrix", "replacement": "\\begin{matrix}\n$0\n\\end{matrix}", "options": "MA"},
-    {"trigger": "pmat", "replacement": "\\begin{pmatrix}$0\\end{pmatrix}", "options": "nA"},
+    {"trigger": "jz", "replacement": "\\begin{pmatrix}\n$0\n\\end{pmatrix}", "options": "MA"}, // 矩阵
+    //{"trigger": "pmat", "replacement": "\\begin{pmatrix}$0\\end{pmatrix}", "options": "nA"},
     {"trigger": "bmat", "replacement": "\\begin{bmatrix}$0\\end{bmatrix}", "options": "nA"},
     {"trigger": "Bmat", "replacement": "\\begin{Bmatrix}$0\\end{Bmatrix}", "options": "nA"},
     {"trigger": "vmat", "replacement": "\\begin{vmatrix}$0\\end{vmatrix}", "options": "nA"},
-    {"trigger": "hls", "replacement": "\\begin{vmatrix}$0\\end{vmatrix}", "options": "nA"},
-    {"trigger": "jz", "replacement": "\\begin{pmatrix}$0\\end{pmatrix}", "options": "nA"},
+    {"trigger": "hls", "replacement": "\\begin{vmatrix}$0\\end{vmatrix}", "options": "nA"},// 行列式
+    {"trigger": "jz", "replacement": "\\begin{pmatrix}$0\\end{pmatrix}", "options": "nA"}, // 矩阵
     {"trigger": "Vmat", "replacement": "\\begin{Vmatrix}$0\\end{Vmatrix}", "options": "nA"},
     {"trigger": "matrix", "replacement": "\\begin{matrix}$0\\end{matrix}", "options": "nA"},
-    {"trigger": "case", "replacement": "\\begin{cases}$0\n\\end{cases}", "options": "mA"},
-    {"trigger": "align", "replacement": "\\begin{align}$0\n\\end{align}", "options": "mA"},
-    {"trigger": "array", "replacement": "\\begin{array}$0\n\\end{array}", "options": "mA"},
+    {"trigger": "case", "replacement": "\\begin{cases}$0\\end{cases}", "options": "mA"},
+    {"trigger": "align", "replacement": "\\begin{align}$0\\end{align}", "options": "mA"},
+    {"trigger": "array", "replacement": "\\begin{array}$0\\end{array}", "options": "mA"},
 
 
     // Brackets
