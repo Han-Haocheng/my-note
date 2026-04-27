@@ -110,6 +110,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
      --wildcards-match-slash   通配符匹配‘/’（对 exclusion  
                             为默认值）  
   
+```
+  
+```bash
 重写控制:  
   
      --keep-directory-symlink   解压时保留已存在的目录符号链接  
@@ -129,6 +132,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
  -U, --unlink-first         在解压要重写的文件之前先删除它们  
  -W, --verify               在写入以后尝试校验归档  
   
+```
+  
+```bash
 选择输出流：  
   
      --ignore-command-error 忽略子进程的退出代码  
@@ -138,6 +144,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
      --to-command=COMMAND  
                             将解压的文件通过管道传送至另一个程序  
   
+```
+  
+```bash
 操作文件属性:  
   
      --atime-preserve[=METHOD]  
@@ -173,6 +182,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
  -s, --preserve-order, --same-order  
                             成员参数按归档中的文件顺序列出  
   
+```
+  
+```bash
 操作extended 文件属性:  
   
      --acls                 开启 POSIX ACLs 支持  
@@ -184,6 +196,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
      --xattrs-exclude=MASK  为xattr 关键字指定排除匹配项  
      --xattrs-include=MASK  为xattr 关键字指定包含匹配项  
   
+```
+  
+```bash
 设备选择和切换：  
   
      --force-local  
@@ -197,6 +212,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
      --rsh-command=COMMAND  使用远程 COMMAND 代替 rsh  
      --volno-file=FILE      使用/更新 FILE 中的卷数  
   
+```
+  
+```bash
 设备分块:  
   
  -b, --blocking-factor=BLOCKS   每个记录 BLOCKS x 512 字节  
@@ -204,6 +222,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
  -i, --ignore-zeros         忽略归档中的零字节块(即文件结尾)  
      --record-size=NUMBER   每个记录的字节数 NUMBER，乘以 512  
   
+```
+  
+```bash
 选择归档格式:  
   
  -H, --format=FORMAT        创建指定格式的归档  
@@ -225,6 +246,9 @@ FORMAT 是以下格式中的一种:
                             的归档；在列出/解压时，使用 TEXT  
                             作为卷名的模式串  
   
+```
+  
+```bash
 压缩选项:  
   
  -a, --auto-compress        使用归档后缀名来决定压缩程序  
@@ -241,6 +265,9 @@ FORMAT 是以下格式中的一种:
  -z, --gzip, --gunzip, --ungzip   通过 gzip 过滤归档  
  -Z, --compress, --uncompress   通过 compress 过滤归档  
   
+```
+  
+```bash
 本地文件选择:  
   
      --backup[=CONTROL]     在删除前备份，选择 CONTROL 版本  
@@ -260,6 +287,9 @@ FORMAT 是以下格式中的一种:
                             SIMPLE_BACKUP_SUFFIX  
                             覆盖，否则覆盖常用后缀(‘’)  
   
+```
+  
+```bash
 文件名变换:  
   
      --strip-components=NUMBER   解压时从文件名中清除 NUMBER  
@@ -267,7 +297,10 @@ FORMAT 是以下格式中的一种:
      --transform=EXPRESSION, --xform=EXPRESSION  
                             使用 sed 代替 EXPRESSION  
                             来进行文件名变换  
+
+```
   
+```bash  
 提示性输出:  
   
      --checkpoint[=NUMBER]  每隔 NUMBER  
@@ -301,12 +334,18 @@ FORMAT 是以下格式中的一种:
  -w, --interactive, --confirmation  
                             每次操作都要求确认  
   
+```
+  
+```bash
 兼容性选项:  
   
  -o                         创建归档时，相当于  
                             --old-archive；展开归档时，相当于  
                             --no-same-owner  
   
+```
+  
+```bash
 其它选项:  
   
  -?, --help                 显示此帮助列表  
@@ -314,6 +353,9 @@ FORMAT 是以下格式中的一种:
      --usage                显示简短的用法说明  
      --version              打印程序版本  
   
+```
+  
+```bash
 长选项和相应短选项具有相同的强制参数或可选参数。  
   
 The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.  
