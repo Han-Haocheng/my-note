@@ -8,8 +8,9 @@ tar -tvf archive.tar         # List all files in archive.tar verbosely.
 tar -xf archive.tar          # Extract all files from archive.tar.  
 ```
 
-```bash
-主操作模式:  
+
+## 主操作模式
+```bash  
  -A, --catenate, --concatenate   追加 tar 文件至归档  
  -c, --create               创建一个新归档  
      --delete               从归档(非磁带！)中删除  
@@ -22,8 +23,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
 ```
 
 
+## 操作修饰符
+
 ```bash
-操作修饰符:  
   
      --check-device         当创建增量归档时检查设备号(默认)  
  -g, --listed-incremental=FILE   处理新式的 GNU 格式的增量备份  
@@ -52,7 +54,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
 
   
 
+```
   
+```bash
 本地文件名选择:  
      --add-file=FILE        添加指定的 FILE 至归档(如果名字以 -  
                             开始会很有用的)  
@@ -90,6 +94,9 @@ tar -xf archive.tar          # Extract all files from archive.tar.
                             逐字读取文件名（不处理选项或进行转义）  
  -X, --exclude-from=FILE    排除 FILE 中列出的模式串  
   
+```
+  
+```bash
 文件名匹配选项(同时影响排除和包括模式串):  
   
      --anchored             模式串匹配文件名头部  
