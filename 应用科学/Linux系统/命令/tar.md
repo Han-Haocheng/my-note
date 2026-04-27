@@ -1,6 +1,13 @@
 
 tar：将多个文件合并保存到单个磁带或磁盘归档中，并能从归档中恢复单个文件。
 
+
+用法
+
+```bash
+tar [选项...] [FILE]...
+```
+
 举例
 ```bash
 tar -cf archive.tar foo bar  # Create archive.tar from files foo and bar.  
@@ -10,6 +17,7 @@ tar -xf archive.tar          # Extract all files from archive.tar.
 
 
 ## 主操作模式
+
 ```bash  
  -A, --catenate, --concatenate   追加 tar 文件至归档  
  -c, --create               创建一个新归档  
@@ -48,13 +56,6 @@ tar -xf archive.tar          # Extract all files from archive.tar.
  -S, --sparse               高效处理离散文件  
 ```
 
-```bash
-用法: tar [选项...] [FILE]...  
-  
-
-  
-
-```
   
 ```bash
 本地文件名选择:  
