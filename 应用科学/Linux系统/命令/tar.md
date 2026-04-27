@@ -1,16 +1,14 @@
 
+tar：将多个文件合并保存到单个磁带或磁盘归档中，并能从归档中恢复单个文件。
 
+举例
+```bash
+tar -cf archive.tar foo bar  # Create archive.tar from files foo and bar.  
+tar -tvf archive.tar         # List all files in archive.tar verbosely.  
+tar -xf archive.tar          # Extract all files from archive.tar.  
+```
 
 ```bash
-用法: tar [选项...] [FILE]...  
-GNU 'tar' saves many files together into a single tape or disk archive, and can  
-restore individual files from the archive.  
-  
-Examples:  
- tar -cf archive.tar foo bar  # Create archive.tar from files foo and bar.  
- tar -tvf archive.tar         # List all files in archive.tar verbosely.  
- tar -xf archive.tar          # Extract all files from archive.tar.  
-  
 主操作模式:  
  -A, --catenate, --concatenate   追加 tar 文件至归档  
  -c, --create               创建一个新归档  
@@ -21,7 +19,10 @@ Examples:
  -t, --list                 列出归档内容  
  -u, --update               仅追加比归档中副本更新的文件  
  -x, --extract, --get       从归档中解出文件  
-  
+```
+
+
+```bash
 操作修饰符:  
   
      --check-device         当创建增量归档时检查设备号(默认)  
@@ -43,6 +44,14 @@ Examples:
                             设置所用的离散格式版本(隐含  
                             --sparse)  
  -S, --sparse               高效处理离散文件  
+```
+
+```bash
+用法: tar [选项...] [FILE]...  
+  
+
+  
+
   
 本地文件名选择:  
      --add-file=FILE        添加指定的 FILE 至归档(如果名字以 -  
