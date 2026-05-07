@@ -15,7 +15,7 @@ graph LR
 ```
 
 ```mermaid
-graph TB
+graph LR
   A[/开始/]
   Z[/结束/]
   C-->|否|D
