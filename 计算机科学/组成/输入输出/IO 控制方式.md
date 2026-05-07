@@ -40,7 +40,7 @@ graph TD
 
 ### 程序查询方式接口电路
 
-![image.png](5.4image.png)
+![image.png](计算机_组成_输入输出_程序查询方式接口电路.png)
 
 以输入为例
 
