@@ -216,6 +216,5 @@ end
 
 ![image.png](5.6image10.png)
 
-## 多路型DMA接口的工作原理
 
 ![image.png](5.6image11.png)
