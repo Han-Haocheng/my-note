@@ -140,7 +140,7 @@ end
 
 DMA 访问主存有三种可能
 - CPU 此时不访存
-- CPU 正在访存
+- CPU 正在访存：等待 CPU 机器周期（存取）结束后，CPU 将总线占有权让出
 - CPU 与 DMA 同时请求访存（此时 CPU 将总线让给 DMA）
 
 ![image.png](5.6image2.png)
