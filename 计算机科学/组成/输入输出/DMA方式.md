@@ -217,4 +217,4 @@ end
 ![image.png](5.6image10.png)
 
 
-![image.png](5.6image11.png)
+![image.png](计算机%20组成%20输入输出%20多路型DMA接口的工作原理.png)
