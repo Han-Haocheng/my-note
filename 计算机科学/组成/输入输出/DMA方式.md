@@ -99,16 +99,13 @@ graph TD
 
 通过几条输入输出指令预置如下信息
 
-- 通过DMA控制逻辑传送方向（入/出）
-
-- 设备地址→DMA的DAR
-
-- 主存地址→DMA的AR
-
-- 传送字数→DMA的WC
+1. 通过DMA控制逻辑传送方向（入/出）
+2. 设备地址→DMA的DAR
+3. 主存地址→DMA的AR
+4. 传送字数→DMA的WC
 
 ```mermaid
-graph LR  
+graph LR
 subgraph 数据传送
     H[/开始/]
     I[/结束/]
