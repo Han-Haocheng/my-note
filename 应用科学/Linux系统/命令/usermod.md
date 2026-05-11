@@ -1,4 +1,4 @@
-usermod：
+usermod：修改一个用户账户
 ```bash
 usermod [选项] 登录名
   
