@@ -1,0 +1,30 @@
+filters:
+  and:
+    - file.inFolder("数学/高等数学")
+    - '!file.inFolder("数学/高等数学/_old")'
+views:
+  - type: cards
+    name: 附件
+    filters:
+      and:
+        - file.ext != "md"
+    order:
+      - file.name
+      - file.backlinks
+    sort: []
+    summaries:
+      formula.未命名: new summary
+    columnSize:
+      file.name: 225
+    image: file.file
+    imageFit: contain
+  - type: list
+    name: 笔记
+    filters:
+      and:
+        - file.ext == "md"
+    order:
+      - file.name
+      - file.links
+    markers: bullet
+    indentProperties: true
