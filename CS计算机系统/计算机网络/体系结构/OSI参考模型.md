@@ -8,13 +8,10 @@ OSI参考模型：支持异构网络系统的互联互通，理解网络通信�
 ## 层次划分
 
 - 端到端层end-end
-	- 应用层Application
-	- 表示层Presentation
-	- 会话层Session
-	- 传输层Transport
-- 网络层Network
-- 数据链路层Datalink
-- 物理层Physical
-
-
-端到端层end-end：应用层、表示层、会话层、传输层
+	- 应用层Application：提供应用接口
+	- 表示层Presentation：数据格式转换、数据加密和解密
+	- 会话层Session：会话建立、同步、会话管理
+	- 传输层Transport：流量控制、差错控制、数据传输管理
+- 网络层Network：流量控制、拥塞控制、差错控制和网际互连
+- 数据链路层Datalink：数据的帧化和传输，处理差错控制和流量控制
+- 物理层Physical：在物理媒体上为数据设备透明地传输原始比特流
