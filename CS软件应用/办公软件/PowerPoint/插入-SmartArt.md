@@ -4,7 +4,7 @@
 - 包含：列表图、流程图、循环图、层次结构图、关系图、矩阵图等
 
 ## 插入SmartArt图形
-#计算机/软件应用/MSOffice/PortPoint操作 插入SmartArt图形
+#计算机科学/软件应用/msoffice/portpoint操作 插入SmartArt图形
 
 - 通过`插入`选项卡
 	1. 单击`插入`选项卡→`插图`组-> `SmartArt`![[Pasted image 20241020191736.png|30]]命令
@@ -17,7 +17,7 @@
 	2. 选中快捷菜单->`转换为 SmartArt`命令
 
 ## 在SmartArt图形中编辑文本
-#计算机/软件应用/MSOffice/PortPoint操作 在SmartArt图形中编辑文本
+#计算机科学/软件应用/msoffice/portpoint操作 在SmartArt图形中编辑文本
 
 - 通过SmartArt图形：单击 SmartArt图形->"\[文本\]"直接输入
 - 通过控制按钮
@@ -29,7 +29,7 @@
 >2. 执行`编辑文字`命令
 
 ## 设置SmartArt文本格式
-#计算机/软件应用/MSOffice/PortPoint操作 设置SmartArt文本格式
+#计算机科学/软件应用/msoffice/portpoint操作 设置SmartArt文本格式
 
 - 通过浮动工具栏
 	1. 选中要格式化的文本
@@ -38,7 +38,7 @@
 
 ## 设置SmartArt图形版式
 
-#计算机/软件应用/MSOffice/PortPoint操作 设置SmartArt图形的版式与样式
+#计算机科学/软件应用/msoffice/portpoint操作 设置SmartArt图形的版式与样式
 
 - 通过`SmartArt工具/设计`选项卡
 	1. 选中 SmartArt图形
@@ -48,7 +48,7 @@
 
 ## 设置SmartArt图形样式
 
-#计算机/软件应用/MSOffice/PortPoint操作 设置SmartArt图形的样式
+#计算机科学/软件应用/msoffice/portpoint操作 设置SmartArt图形的样式
 
 
 - `SmartArt工具/设计`选项卡
@@ -56,7 +56,7 @@
 	2. 单击`SmartArt工具/设计`选项卡->`SmartArt样式`组->对应样式
 
 ## 在SmartArt图形中编辑形状
-#计算机/软件应用/MSOffice/PortPoint操作**在SmartArt图形中编辑形状**：根据需要对形状进行添加、删除、更改或格式化等操作
+#计算机科学/软件应用/msoffice/portpoint操作**在SmartArt图形中编辑形状**：根据需要对形状进行添加、删除、更改或格式化等操作
 
 ### 添加形状
 - 通过`SmartArt工具/设计`选项卡
@@ -80,7 +80,7 @@
 **SmartArt图形转换**：可以将幻灯片中的文本转换，还可以将SmartArt图形转换为文本
 
 ### 文本转换为SmartArt图形
-#计算机/软件应用/MSOffice/PortPoint操作 文本转换为SmartArt图形
+#计算机科学/软件应用/msoffice/portpoint操作 文本转换为SmartArt图形
 - 通过`SmartArt工具/设计`选项卡
 	1. 选中文本
 	2. 单击`开始`选项卡→`段落`组->`转换为SmartArt`命令
@@ -88,14 +88,14 @@
 
 ### SmartArt图形转换为文本
 
-#计算机/软件应用/MSOffice/PortPoint操作 SmartArt图形转换为文本
+#计算机科学/软件应用/msoffice/portpoint操作 SmartArt图形转换为文本
 - 通过`SmartArt工具/设计`选项卡
 	1. 选中 SmartArt图形
 	2. 选择`SmartArt工具/设计`选项卡->`重置`组->`转换`命令
 	3. 选择`转换为文本`
 
 ### SmartArt图形转换为形状
-#计算机/软件应用/MSOffice/PortPoint操作 SmartArt图形转换为形状
+#计算机科学/软件应用/msoffice/portpoint操作 SmartArt图形转换为形状
 
 - 通过`SmartArt工具/设计`选项卡
 	1. 选中 SmartArt图形
