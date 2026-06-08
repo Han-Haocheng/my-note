@@ -342,6 +342,15 @@
     // Misc
     // 泰勒展开
     {"trigger": "tayl", "replacement": "${0:f}(${1:x} + ${2:h}) = ${0:f}(${1:x}) + ${0:f}'(${1:x})${2:h} + ${0:f}''(${1:x}) \\frac{${2:h}^{2}}{2!} + \\dots$3", "options": "mA"},
+    {"trigger": /([a-zA-Z])shuzu(\d)/,"replacement": (match) =>{
+            const n = match[2];
+
+            let arr = [];
+            for (let j = 1; j < n; j++){
+                arr[j] = match[1]+"_{"+j+"}";
+            }
+        }
+    },
     // 单位矩阵
     {"trigger": /dwjz(\d)/, "replacement": (match) => {
         const n = match[1];
