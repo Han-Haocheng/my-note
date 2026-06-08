@@ -347,12 +347,11 @@
 
         let arr = [];
         for (let j = 1; j < n; j++){
-            arr[j] = match[1]+"_{"+j+"}";
+            arr[j] = `$match[1]_{$j}`;
         }
-        let output = arr.map(el => el.join(" & ")).join(" \\\\\n");
-        output = `\\begin{pmatrix}\n${output}\n\\end{pmatrix}`;
+        let output = arr.map(el => el.join(", "));
         return output;
-    }, "options": "mA", "description": "N x N identity matrix"},
+    }, "options": "mA", "description": "N array"},
     // 单位矩阵
     {"trigger": /dwjz(\d)/, "replacement": (match) => {
         const n = match[1];
