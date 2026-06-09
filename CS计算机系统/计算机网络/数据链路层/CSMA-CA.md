@@ -37,15 +37,15 @@ DIFS>SIFS
 
 CSMA/CA 可以选择通过使用 RTS 和 CTS 服务，来尽量避免隐藏站和暴露站问题
 
-### DIFS
+### DIFS 与 SIFS
 
 ![[Pasted image 20260609204813.png]]
 
 DIFS：当一个设备想要发送一个新的数据帧，开启一个新的连接时，它需要等待一个 DIFS 的时间
-### SIFS
+
 SIFS：用来保障一个完整的传输序列不被打断
 
-### RTS
+### RTS 与 CTS
 
 RTS 控制帧：包含源地址、目的地址、预计通信持续时间
 
