@@ -9,7 +9,7 @@ tags:
 
 ![[Pasted image 20260609202531.png]]
 
-基于冲突检测的载波监听多路访问技术CSMA-CD（Carrier Sense Multiple Access with Collision Detection）
+基于冲突检测的载波监听多路访问技术CSMA-CD（Carrier Sense Multiple Access with Collision Detection）：基于 1-CSMA
 
 最小帧长公式：$最小帧长=RTT \times 发送速率$
 
