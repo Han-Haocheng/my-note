@@ -8,3 +8,10 @@ tags:
 
 CSMA 协议
 
+## 类型
+
+### 1-坚持 CSMA
+
+### 非坚持 CSMA
+
+### p-坚持 CSMA
