@@ -24,16 +24,22 @@ tags:
 
 ## 流程
 
-![[Pasted image 20260609204813.png]]
+![[Pasted image 20260609204901.png]]
 
 DIFS>SIFS
 
 1. 主机 A 想要向接入点 AP 发送消息，首先检查信道是否空闲
 2. 主机 A 等待 DIFS 的延迟时间
 3. A 向 AP 发送 RTS 控制帧
-4. AP 如果空闲，等待 SIFS 时间后向主机 A 发送 CTS 帧
+4. AP 如果空闲，等待 SIFS 时间
+5. AP 向主机 A 发送 CTS 帧
+
+
+CSMA/CA 可以选择通过使用 RTS 和 CTS 服务，来尽量避免隐藏站和暴露站问题
 
 ### DIFS
+
+![[Pasted image 20260609204813.png]]
 
 DIFS：当一个设备想要发送一个新的数据帧，开启一个新的连接时，它需要等待一个 DIFS 的时间
 ### SIFS
@@ -41,10 +47,8 @@ SIFS：用来保障一个完整的传输序列不被打断
 
 ### RTS
 
-CSMA/CA 可以选择通过使用 RTS 和 CTS 服务，来尽量避免隐藏站和暴露站问题
 
 
-![[Pasted image 20260609204901.png]]
 
 
 
