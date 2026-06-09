@@ -6,3 +6,5 @@ tags:
 # CSMA-CA
 
 ![[Pasted image 20260609202531.png]]
+
+CSMA-CA
