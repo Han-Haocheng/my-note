@@ -8,3 +8,5 @@ tags:
 ![[Pasted image 20260609202531.png]]
 
 CSMA-CA
+
+最小帧长公式：$最小帧长=RTT \times 发送速率$
