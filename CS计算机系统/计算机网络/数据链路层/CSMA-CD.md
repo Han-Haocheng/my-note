@@ -9,17 +9,8 @@ tags:
 
 ![[Pasted image 20260609202531.png]]
 
-基于冲突检测的载波监听多路访问技术CSMA-CD（Carrier Sense Multiple Access with Collision Detection）：基于 1-CSMA
+基于冲突检测的载波监听多路访问技术CSMA-CD（Carrier Sense Multiple Access with Collision Detection）：在1-坚持 CSMA 基础上增加了[[冲突检测]]机制
+- 最小帧长公式：$最小帧长=RTT \times 发送速率$
 
-最小帧长公式：$最小帧长=RTT \times 发送速率$
 
-
-# 二进制指数退避算法
-
-发生碰撞的站在停止发送数据后，要推迟（退避）一个随机时间才能再发送数据
-- 基本退避时间取为争用期 2τ
-- 从整数集合 $[0,1,…,(2^* -1)]$ 中随机地取出一个数，记为 r。重传所需的时延就是 r 倍的基本退避时间。
-- 参数 k 按下面的公式计算：
-  $k = \min\{\text{冲突次数}, 10\}$
-- 当 k<10 时，参数 k 等于重传次数。
-- 当重传次数达 16 次仍不能成功时即丢弃该帧，并向高层报告。
+[[二进制指数退避算法]]
