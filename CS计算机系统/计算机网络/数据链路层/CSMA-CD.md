@@ -11,7 +11,7 @@ tags:
 
 基于冲突检测的载波监听多路访问技术CSMA-CD（Carrier Sense Multiple Access with Collision Detection）：在1-坚持 CSMA 基础上增加了[[冲突检测]]机制
 - 最小帧长公式：$最小帧长=RTT \times 发送速率$
-- 通常适用于以太网
+- 通常适用于以太网：因为有线网络允许同时发送接收数据
 
 
 [[二进制指数退避算法]]
