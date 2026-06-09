@@ -6,7 +6,7 @@ tags:
 # CSMA 协议
 
 
-载波侦听多路访问 CSMA 协议（Carrier Sense Multiple Access）：协议通过监听信道状态来减少数据传输冲突。
+**载波侦听多路访问 CSMA 协议**（Carrier Sense Multiple Access）：协议通过监听信道状态来减少数据传输冲突。
 
 
 
