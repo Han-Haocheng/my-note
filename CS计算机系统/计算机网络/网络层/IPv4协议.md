@@ -6,14 +6,6 @@ tags:
 
 # IPv 4 协议
 
-![[Pasted image 20251103083213.png]]
-
-与网际协议IPv4 配套的3 个协议:
-
-1. 地址解析协议 ARP(AddressResolution Protocol)
-2. 网际控制报文协议ICMP(Internet Control Message Protocol)
-3. 网际组管理协议 IGMP(Internet Group Management Protocol)
-
 ## 虚拟互连网络
 
 ![[Pasted image 20251020090131.png]]
