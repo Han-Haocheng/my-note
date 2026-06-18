@@ -1,1 +1,6 @@
-{}
+{
+	"nodes":[
+		{"id":"fe6763567ccc2a91","x":-200,"y":-20,"width":250,"height":60,"type":"text","text":"计算机系统"}
+	],
+	"edges":[]
+}
