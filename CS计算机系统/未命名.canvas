@@ -1,6 +1,18 @@
 {
 	"nodes":[
-		{"id":"4e524d8b08e91d77","type":"text","text":"# [[计算机网络]]\n\n\n#类型/网络/概念 \n- [[边缘部分]]\n- [[传输技术]]\n\n#类型/性能指标 \n- [[信道利用率]]\n- [[带宽]]\n- [[丢包率]]\n- [[时延]]\n- [[时延带宽积]]\n- [[速率]]\n- [[吞吐量]]\n- [[往返时间]]","x":-180,"y":-40,"width":308,"height":460}
+		{"id":"508a53edf65c40f1","x":845,"y":568,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/广域网.md"},
+		{"id":"4e524d8b08e91d77","type":"text","text":"# [[计算机网络]]","x":-220,"y":220,"width":180,"height":80},
+		{"id":"849a087a9e35df1a","type":"text","text":"## [[物理层]]","x":80,"y":160,"width":250,"height":60},
+		{"id":"cc9759c92d3a9513","type":"text","text":"## [[数据链路层]]","x":80,"y":700,"width":250,"height":60},
+		{"id":"6e20de21c373da38","x":391,"y":900,"width":250,"height":60,"type":"text","text":"设备"},
+		{"id":"cf3a0bdfc87675a5","x":391,"y":760,"width":250,"height":60,"type":"text","text":"功能"},
+		{"id":"f4b25436da78a391","x":391,"y":640,"width":250,"height":60,"type":"text","text":"概念"}
 	],
-	"edges":[]
+	"edges":[
+		{"id":"5b1b936f3e24f5d5","fromNode":"4e524d8b08e91d77","fromSide":"right","toNode":"849a087a9e35df1a","toSide":"left"},
+		{"id":"3b5d41c03e556527","fromNode":"4e524d8b08e91d77","fromSide":"right","toNode":"cc9759c92d3a9513","toSide":"left"},
+		{"id":"e0ddd783d8a419e1","fromNode":"cc9759c92d3a9513","fromSide":"right","toNode":"f4b25436da78a391","toSide":"left"},
+		{"id":"c62c074d0c757cd6","fromNode":"cc9759c92d3a9513","fromSide":"right","toNode":"cf3a0bdfc87675a5","toSide":"left"},
+		{"id":"d883cfc8bfe7c89f","fromNode":"cc9759c92d3a9513","fromSide":"right","toNode":"6e20de21c373da38","toSide":"left"}
+	]
 }
