@@ -1,30 +1,29 @@
 {
 	"nodes":[
-		{"id":"31a82b687353aabe","x":1100,"y":500,"width":3800,"height":1680,"type":"group","label":"未命名组"},
+		{"id":"31a82b687353aabe","x":-130,"y":500,"width":5030,"height":2460,"type":"group","label":"未命名组"},
 		{"id":"4e524d8b08e91d77","type":"text","text":"# [[计算机网络]]","x":-220,"y":220,"width":180,"height":80},
 		{"id":"849a087a9e35df1a","type":"text","text":"## [[物理层]]","x":80,"y":160,"width":250,"height":60},
-		{"id":"41db1eece96cb434","type":"file","file":"CS计算机系统/计算机网络/数据链路层/数据链路层.md","x":-9,"y":820,"width":400,"height":400},
 		{"id":"f4b25436da78a391","type":"text","text":"概念","x":520,"y":760,"width":250,"height":60},
 		{"id":"cf3a0bdfc87675a5","type":"text","text":"功能","x":520,"y":1020,"width":250,"height":60},
 		{"id":"6e20de21c373da38","type":"text","text":"设备","x":520,"y":1400,"width":250,"height":60},
-		{"id":"92221c27b7111ddc","x":1120,"y":520,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/差错控制.md"},
-		{"id":"8f58110510d85804","x":1680,"y":520,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/点对点协议.md"},
 		{"id":"79fc7af0354a83f1","x":2240,"y":520,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/二进制指数退避算法.md"},
 		{"id":"bef7d8f474cb9a88","x":2800,"y":520,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/封装成帧.md"},
 		{"id":"2f3512fd211326a6","x":3360,"y":520,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/广域网.md"},
 		{"id":"cba1d4a4ed4896a7","x":3920,"y":520,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/交换机.md"},
 		{"id":"49106362f2785a38","x":4480,"y":520,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/介质访问控制.md"},
 		{"id":"941410796acf5602","x":5040,"y":520,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/局域网.md"},
-		{"id":"cf92bfa2f248abbd","x":1120,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/数据链路层.md"},
-		{"id":"66dcd6dd3061415a","x":1680,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/网桥.md"},
 		{"id":"6bf9318bce2dda2a","x":2240,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/最大传送单元.md"},
 		{"id":"883691249a69625d","x":2800,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/ALOHA协议.md"},
 		{"id":"5099c97f31f36bbb","x":3360,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/CSMA-CA.md"},
 		{"id":"0ebaad235febd28b","x":3920,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/CSMA-CD.md"},
 		{"id":"355c63dcf16cafef","x":4480,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/CSMA协议.md"},
 		{"id":"4efd1eb9e0a90267","x":5040,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/MAC地址.md"},
-		{"id":"8a36ac255f25eb55","x":1120,"y":1640,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/流量控制.md"},
-		{"id":"144242a4aec6aef3","x":1680,"y":1640,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/可靠传输.md"}
+		{"id":"144242a4aec6aef3","x":1680,"y":1640,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/可靠传输.md"},
+		{"id":"66dcd6dd3061415a","x":1120,"y":1640,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/网桥.md"},
+		{"id":"41db1eece96cb434","type":"file","file":"CS计算机系统/计算机网络/数据链路层/数据链路层.md","x":-40,"y":880,"width":400,"height":400},
+		{"id":"8a36ac255f25eb55","x":1120,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/流量控制.md"},
+		{"id":"92221c27b7111ddc","x":1680,"y":1080,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/差错控制.md"},
+		{"id":"8f58110510d85804","x":1120,"y":2200,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/点对点协议.md"}
 	],
 	"edges":[
 		{"id":"5b1b936f3e24f5d5","fromNode":"4e524d8b08e91d77","fromSide":"right","toNode":"849a087a9e35df1a","toSide":"left"}
