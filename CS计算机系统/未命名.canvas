@@ -1,12 +1,14 @@
 {
 	"nodes":[
+		{"id":"33d90aefbd678ad0","x":1225,"y":1842,"width":250,"height":60,"type":"text","text":"[[最大传送单元]]"},
 		{"id":"4e524d8b08e91d77","type":"text","text":"# [[计算机网络]]","x":-220,"y":220,"width":180,"height":80},
 		{"id":"849a087a9e35df1a","type":"text","text":"## [[物理层]]","x":80,"y":160,"width":250,"height":60},
-		{"id":"6e20de21c373da38","x":391,"y":900,"width":250,"height":60,"type":"text","text":"设备"},
-		{"id":"cf3a0bdfc87675a5","x":391,"y":760,"width":250,"height":60,"type":"text","text":"功能"},
-		{"id":"f4b25436da78a391","x":391,"y":640,"width":250,"height":60,"type":"text","text":"概念"},
-		{"id":"508a53edf65c40f1","x":845,"y":568,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/广域网.md"},
-		{"id":"41db1eece96cb434","x":-9,"y":820,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/数据链路层.md"}
+		{"id":"41db1eece96cb434","type":"file","file":"CS计算机系统/计算机网络/数据链路层/数据链路层.md","x":-9,"y":820,"width":400,"height":400},
+		{"id":"f4b25436da78a391","type":"text","text":"概念","x":520,"y":760,"width":250,"height":60},
+		{"id":"cf3a0bdfc87675a5","type":"text","text":"功能","x":520,"y":1020,"width":250,"height":60},
+		{"id":"6e20de21c373da38","type":"text","text":"设备","x":520,"y":1400,"width":250,"height":60},
+		{"id":"508a53edf65c40f1","type":"file","file":"CS计算机系统/计算机网络/数据链路层/广域网.md","x":1160,"y":420,"width":400,"height":400},
+		{"id":"b7757c6fed8227cd","x":1305,"y":1081,"width":400,"height":400,"type":"file","file":"CS计算机系统/计算机网络/数据链路层/局域网.md"}
 	],
 	"edges":[
 		{"id":"5b1b936f3e24f5d5","fromNode":"4e524d8b08e91d77","fromSide":"right","toNode":"849a087a9e35df1a","toSide":"left"}
