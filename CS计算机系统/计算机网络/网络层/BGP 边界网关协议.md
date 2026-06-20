@@ -17,6 +17,8 @@ eBGP 和 iBGP
 - 同一个协议 BGP，使用的报文类型、使用的属性、使用的状态机等都完全一样
 - 但在通报前缀时采用的规则不同
 
+
+
 ### eBGP
 eBGP：用于不同自治系统之间路由信息交换
 - 在连接的对等端得知的前缀信息，可以通报给一个 iBGP 连接的对等端。反过来也是可以的。
@@ -45,9 +47,7 @@ eBGP (external BGP) 连接：运行 eBGP 协议，在不同 AS 之间交换路�
 iBGP (internal BGP) 连接：运行 iBGP 协议， 在 AS 内部的路由器之间交换 BGP 路由信息。
 
 
-### IGP、iBGP 和 eBGP 的关系
-- 在 AS 内部运行：内部网关协议 IGP（可以是协议 OSPF 或 RIP）。协议 iBGP。
-- 在 AS 之间运行：协议 eBGP。
+
 
 
 
