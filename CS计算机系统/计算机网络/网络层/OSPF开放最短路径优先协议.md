@@ -4,7 +4,7 @@ tags:
   - 类型/网络/协议
 ---
 
-# 内部网关协议 OSPF
+# 内部网关协议 
 
 开放最短路径优先OSPF (Open Shortest Path First)：使用了 Dijkstra 提出的最短路径算法 SPF。采用分布式链路状态协议link state protocol，
 - 克服 RIP 的缺点，在 1989 年开发出来的
