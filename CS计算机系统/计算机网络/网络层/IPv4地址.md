@@ -4,10 +4,10 @@ tags:
   - 类型/网络/概念
 ---
 
-# IP地址
+# IPv4地址
 
 
-**IP 地址**：给互联网上的每一台主机 （或路由器）的每一个接口分配一个在全世界范围内是唯一的 32 位的标识符。互联网名字和数字分配机构 ICANN (Internet Corporation for Assigned Names and Numbers)
+**IPv4 地址**：给互联网上的每一台主机 （或路由器）的每一个接口分配一个在全世界范围内是唯一的 32 位的标识符。互联网名字和数字分配机构 ICANN (Internet Corporation for Assigned Names and Numbers)
 - 单播地址：一对一通信的地址
 
 
