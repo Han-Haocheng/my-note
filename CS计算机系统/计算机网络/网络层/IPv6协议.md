@@ -123,10 +123,5 @@ IPv6 数据报的一般形式由两大部分组成：基本首部 (base header)�
 
 
 ![[Pasted image 20251103092951.png]]
-## 4.5.4 ICMPv6
 
-![[Pasted image 20251103093326.png]]
-
-IPv6 也需要使用 ICMP 来反馈一些差错信息。新的版本称为 ICMPv6。
-- ICMPv6 包含了 ARP 和 IGMP 协议的功能中。
 
