@@ -100,7 +100,7 @@ MSL：最大报文生存时间
 - TCP默认使用[[确认机制#累积确认|累积确认]]，即TCP只确认数据流中至第一个丢失字节为止的字节
 
 
-## 性能
+## 性能指标
 
 ### 吞吐率
 
@@ -157,18 +157,6 @@ clientSocket.close();
 
 
 
-### RTT和超时
-
-根据RTT设定时器的超时时间，通过SampleRTT方式估计RTT大小
-- SampleRTT：测量段发出到收到ACK时间，忽略重传
-- EstimatedRTT：测量多个SampleRTT，使用指数加权移动平均方法得到的估计值
-	- $EstimatedRTT=(1-\alpha)\cdot EstimatedRTT+\alpha\cdot SampleRTT$
-	- 典型值：0.125
-- 定时器超时时间：EstimatedRTT+安全边界，边界大小根据变化程度改变
-	- RTT变化值$DevRTT=(1-\beta)\cdot DevRTT+\beta\cdot \lvert{SampleRTT-EstimatedRTT}\rvert$
-	- 经典值：0.25
-	- $TimeoutInterval=EstimatedRTT+4\cdot DevRTT$
-
 ### 发送方事件
 
 事件：从应用层收到数据
@@ -217,3 +205,15 @@ while(true){
 | 到达期望序列号按序段<br>且之前的期望序列号已经ACK | 延迟ACK，等待下一个段500ms。<br>如果没有下一个段，则发送ACK |
 | 到达期望序列号按序段<br>其中一个段等待ACK确认   | 立刻发送累积ACK                             |
 | 到达乱序段<br>检测到有间隙              | 立即发送重复ACK，指示期望得到的段                    |
+
+### RTT和超时
+
+根据RTT设定时器的超时时间，通过SampleRTT方式估计RTT大小
+- SampleRTT：测量段发出到收到ACK时间，忽略重传
+- EstimatedRTT：测量多个SampleRTT，使用指数加权移动平均方法得到的估计值
+	- $EstimatedRTT=(1-\alpha)\cdot EstimatedRTT+\alpha\cdot SampleRTT$
+	- 典型值：0.125
+- 定时器超时时间：EstimatedRTT+安全边界，边界大小根据变化程度改变
+	- RTT变化值$DevRTT=(1-\beta)\cdot DevRTT+\beta\cdot \lvert{SampleRTT-EstimatedRTT}\rvert$
+	- 经典值：0.25
+	- $TimeoutInterval=EstimatedRTT+4\cdot DevRTT$
