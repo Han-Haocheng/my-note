@@ -118,6 +118,45 @@ TCP吞吐率throughput：给定拥塞窗口大小和RTT
 
 ## 实现
 
+建立连接：初始化序列号、缓存和流量控制信息
+- 客户端Client：连接发起者
+
+```c++
+Socket clientSocket = new Socket("hostname","port number"); 
+```
+
+- 服务端Server：等待客户连接请求
+```c++
+Socket connectionSocket = welcomeSocket.accept(); 
+```
+
+三次握手
+
+1. 客户端主机发送TCP SYN段给服务端：没有数据，指定初始序列号
+2. 服务端收到SYN，响应SYNACK段：服务器分配缓存，指定服务器初始序列号
+3. 客户端收到SYNACK段，响应ACK段：可包含数据
+
+![[2025-11-24_085750.svg]]
+
+
+
+
+关闭连接：释放资源
+
+```c++
+clientSocket.close();
+```
+
+1. 客户端向服务器发送TCP FIN控制段
+2. 服务器收到FIN，回复ACK，关闭连接，发送FIN
+3. 客户端收到FIN，回复ACK：进入等待，如果收到FIN则重新发送ACK
+4. 服务器收到ACK：关闭连接
+
+![[2025-12-08_090102.svg]]
+
+
+
+
 ### RTT和超时
 
 根据RTT设定时器的超时时间，通过SampleRTT方式估计RTT大小
@@ -178,43 +217,3 @@ while(true){
 | 到达期望序列号按序段<br>且之前的期望序列号已经ACK | 延迟ACK，等待下一个段500ms。<br>如果没有下一个段，则发送ACK |
 | 到达期望序列号按序段<br>其中一个段等待ACK确认   | 立刻发送累积ACK                             |
 | 到达乱序段<br>检测到有间隙              | 立即发送重复ACK，指示期望得到的段                    |
-### 连接管理
-
-建立连接：初始化序列号、缓存和流量控制信息
-- 客户端Client：连接发起者
-
-```c++
-Socket clientSocket = new Socket("hostname","port number"); 
-```
-
-- 服务端Server：等待客户连接请求
-```c++
-Socket connectionSocket = welcomeSocket.accept(); 
-```
-
-三次握手
-
-1. 客户端主机发送TCP SYN段给服务端：没有数据，指定初始序列号
-2. 服务端收到SYN，响应SYNACK段：服务器分配缓存，指定服务器初始序列号
-3. 客户端收到SYNACK段，响应ACK段：可包含数据
-
-![[2025-11-24_085750.svg]]
-
-
-
-
-关闭连接：释放资源
-
-```c++
-clientSocket.close();
-```
-
-1. 客户端向服务器发送TCP FIN控制段
-2. 服务器收到FIN，回复ACK，关闭连接，发送FIN
-3. 客户端收到FIN，回复ACK：进入等待，如果收到FIN则重新发送ACK
-4. 服务器收到ACK：关闭连接
-
-![[2025-12-08_090102.svg]]
-
-
-
