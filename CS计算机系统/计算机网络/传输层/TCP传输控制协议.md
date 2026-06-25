@@ -60,6 +60,46 @@ TCP连接建立过程又被称为三次握手过程：
 - 单一重传定时器
 - 触发重传事件：超时，收到重复ACK
 
+
+### 快速重传机制
+
+快速重传：在定时器超时之前进行重传
+- 如果发生超时，超时时间被重设，重发丢失的分组之前要等待很长时间
+- 检测分组丢失：Sender会发送连续分组，如果分组丢失会引发多个重复ACK
+- 如果sender收到对同一数据的3个ACK，则假定该数据之后的段已经丢失
+
+```c++
+case 已收到ACK(y):
+	if(y>Sendbse){
+		SendBase = y;
+		if(NAK != nullptr)timer.start(TimeOutInterval);
+	}else {
+		++ACK_times(y);
+		if(ACK_times(y) == 3) 
+			resend_segment(y);
+	}
+```
+
+
+
+## 性能
+
+### TCP吞吐率
+
+TCP吞吐率throughput：给定拥塞窗口大小和RTT
+- 假定发生超时时，COngWin=W，吞吐率为$\frac{W}{RTT}$
+- 超时后CongWin=W/2，吞吐率为$\frac{W}{2RTT}$
+- TCP平均吞吐率为$\frac{0.75W}{RTT}$
+
+### TCP公平性
+
+如果K个TCP会话共享相同的瓶颈带宽R，那么每个会话的平均速率为$\frac{R}{K}$，TCP具有公平性
+- UDP不具备公平性
+- 并发TCP不具备公平性
+
+
+## 实现
+
 ### TCP RTT和超时
 
 根据RTT设定时器的超时时间，通过SampleRTT方式估计RTT大小
@@ -120,37 +160,6 @@ while(true){
 | 到达期望序列号按序段<br>且之前的期望序列号已经ACK | 延迟ACK，等待下一个段500ms。<br>如果没有下一个段，则发送ACK |
 | 到达期望序列号按序段<br>其中一个段等待ACK确认   | 立刻发送累积ACK                             |
 | 到达乱序段<br>检测到有间隙              | 立即发送重复ACK，指示期望得到的段                    |
-### 快速重传机制
-
-快速重传：在定时器超时之前进行重传
-- 如果发生超时，超时时间被重设，重发丢失的分组之前要等待很长时间
-- 检测分组丢失：Sender会发送连续分组，如果分组丢失会引发多个重复ACK
-- 如果sender收到对同一数据的3个ACK，则假定该数据之后的段已经丢失
-
-```c++
-case 已收到ACK(y):
-	if(y>Sendbse){
-		SendBase = y;
-		if(NAK != nullptr)timer.start(TimeOutInterval);
-	}else {
-		++ACK_times(y);
-		if(ACK_times(y) == 3) 
-			resend_segment(y);
-	}
-```
-
-
-### 流量控制
-
-接收方为TCP连接分配buffer，上层应用可能处理buffer中数据的速度较慢
-
-![[2025-11-10_135318.svg]]
-
-流量控制：发送方不会传输的太多太块，以至于淹没接收方导致buffer溢出，是一种速度匹配机制
-- 假定TCP 接收端丢弃乱序的 segment，则buffer中的可用空间spare room$=RcvWindow=RcvBuffer-[LastByteRcvd-LastByteRead]$
-- 接收端通过在段头将RcvWindow告诉发送端，发送端限制自己已经发送但还未收到的ACK数据，不超过接收方空闲RcvWindow尺寸
-- 接收端告知发送端RcvWindow=0，发送端停止发送数据，直到下次ACK数据
-
 ### 连接管理
 
 建立连接：初始化序列号、缓存和流量控制信息
@@ -189,7 +198,16 @@ clientSocket.close();
 
 ![[2025-12-08_090102.svg]]
 
+### 流量控制
 
+接收方为TCP连接分配buffer，上层应用可能处理buffer中数据的速度较慢
+
+![[2025-11-10_135318.svg]]
+
+流量控制：发送方不会传输的太多太块，以至于淹没接收方导致buffer溢出，是一种速度匹配机制
+- 假定TCP 接收端丢弃乱序的 segment，则buffer中的可用空间spare room$=RcvWindow=RcvBuffer-[LastByteRcvd-LastByteRead]$
+- 接收端通过在段头将RcvWindow告诉发送端，发送端限制自己已经发送但还未收到的ACK数据，不超过接收方空闲RcvWindow尺寸
+- 接收端告知发送端RcvWindow=0，发送端停止发送数据，直到下次ACK数据
 
 ### 拥塞控制
 
@@ -236,18 +254,3 @@ BEGIN:
 	if(timeout)CongWin=1;
 goto BEGIN;
 ```
-
-## 性能
-
-### TCP吞吐率
-
-TCP吞吐率throughput：给定拥塞窗口大小和RTT
-- 假定发生超时时，COngWin=W，吞吐率为$\frac{W}{RTT}$
-- 超时后CongWin=W/2，吞吐率为$\frac{W}{2RTT}$
-- TCP平均吞吐率为$\frac{0.75W}{RTT}$
-
-### TCP公平性
-
-如果K个TCP会话共享相同的瓶颈带宽R，那么每个会话的平均速率为$\frac{R}{K}$，TCP具有公平性
-- UDP不具备公平性
-- 并发TCP不具备公平性
