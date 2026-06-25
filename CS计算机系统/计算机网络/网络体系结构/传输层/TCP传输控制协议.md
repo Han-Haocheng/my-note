@@ -18,11 +18,11 @@ TCP协议^[RFCs-793,1122,1323,2018]
 特点：可靠、按序的交付服务，包含拥塞控制、流量控制、建立连接功能
 - 点对点：一个发送方，一个接收方
 - 可靠有序的字节流
-- 流水线机制：通过拥塞控制和流量控制机制设置窗口尺寸
+- [[流水线机制]]：通过拥塞控制和流量控制机制设置窗口尺寸
 - 缓存机制：发送方接收方缓存
 - 全双工full-duplex：同一连接能传输双向数据流
 - 面向连接：发送数据前需要建立连接，只在两端维护，包括端点缓存，连接状态，socket等
-- 流量控制机制
+- [[流量控制机制]]
 
 ## 结构
 
@@ -90,10 +90,15 @@ MSL：最大报文生存时间
 ## 机制
 
 实现可靠传输：确认机制
+[[快速重传机制]]
+
+[[流量控制机制]]
+
+[[拥塞控制]]
 
 ### 确认机制
 
-确认机制
+
 - TCP首部的确认号是期望收到对方的下一个报文段的数据的第一个字节的序号
 - TCP默认使用累计确认，即TCP只确认数据流中至第一个丢失字节为止的字节
 
@@ -213,79 +218,6 @@ clientSocket.close();
 4. 服务器收到ACK：关闭连接
 
 ![[2025-12-08_090102.svg]]
-### 快速重传机制
-
-快速重传：在定时器超时之前进行重传
-- 如果发生超时，超时时间被重设，重发丢失的分组之前要等待很长时间
-- 检测分组丢失：Sender会发送连续分组，如果分组丢失会引发多个重复ACK
-- 如果sender收到对同一数据的3个ACK，则假定该数据之后的段已经丢失
-
-```c++
-case 已收到ACK(y):
-	if(y>Sendbse){
-		SendBase = y;
-		if(NAK != nullptr)timer.start(TimeOutInterval);
-	}else {
-		++ACK_times(y);
-		if(ACK_times(y) == 3) 
-			resend_segment(y);
-	}
-```
 
 
-### 流量控制
 
-接收方为TCP连接分配buffer，上层应用可能处理buffer中数据的速度较慢
-
-![[2025-11-10_135318.svg]]
-
-流量控制：发送方不会传输的太多太块，以至于淹没接收方导致buffer溢出，是一种速度匹配机制
-- 假定TCP 接收端丢弃乱序的 segment，则buffer中的可用空间spare room$=RcvWindow=RcvBuffer-[LastByteRcvd-LastByteRead]$
-- 接收端通过在段头将RcvWindow告诉发送端，发送端限制自己已经发送但还未收到的ACK数据，不超过接收方空闲RcvWindow尺寸
-- 接收端告知发送端RcvWindow=0，发送端停止发送数据，直到下次ACK数据
-
-### 拥塞控制
-
-发送端限制发送速率：`LastByteSent-LastByteAcked <= CongWin`，$rate\simeq \frac{CongWin}{RTT}Bytes/sec$
-- CongWin：动态调整以改变发送速率，反应所感知到的网络拥塞
-- 感知网络拥塞：设定Loss事件为timeout或3个重复ACK。loss事件发生时，发送端降低发送速率
-- 调整发送速率方式：加性增乘性减AIMD、慢启动SS
-
-加性增-乘性减AIMD（Additive Increase-Mulitplicative Decrease）：逐渐增加发送速率，谨慎探测可用宽带，直到发生loss事件
-- 加性增Additive Increase：每个RTT将ConWin增大一个MSS
-- 乘性减Mulitplicative Decrease：发生loss事件后将CongWin减半
-
-慢启动SS：TCP建立时CongWin为1，可用宽带远高于初始速率，ConWin开始指数性增长
-
-Threshold变量：当CongWin达到Loss事件前1/2时切换为线性增长
-- 实现方式：Loss事件发生，设置变量Threshold为事件发生前CongWin值的1/2
-
-Loss事件处理：两种引发条件处理方式不同
-- 收到3个重复ACKs：CongWin切到一半后线性增长
-- Timeout事件：CongWIn直接设为1MSS然后指数增长，到达threshold后线性增长
-
-### TCP拥塞控制算法
-
-```
-Th = ?
-CongWin = 1 MSS
-
-BEGIN:
-	// 慢启动或指数增长
-	While(Loss==NULL && CongWin<Th){
-		send_seg(data,CongWin*MSS);
-		while(ACK) CongWin++;
-	}
-	
-	// 拥塞避免或线性增长
-	While(Loss==NULL){
-		send_seg(data,CongWin*MSS);
-		if(for all ACKs){
-			CongWin++;
-		}
-	}
-	Th=CongWin/2
-	if(SIM_ACK==3)CongWin=Th;
-	if(timeout)CongWin=1;
-goto BEGIN;
-```
