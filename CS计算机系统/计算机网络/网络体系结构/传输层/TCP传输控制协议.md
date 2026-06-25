@@ -132,17 +132,17 @@ TCP吞吐率throughput：给定拥塞窗口大小和RTT
 
 ### 发送方事件
 
-从应用层收到数据
+事件：从应用层收到数据
 1. 创建Segment
 2. 序列号是Segment第一个字节的编号
 3. 开启计时器
 4. 设置超时时间TimeOutInterval
 
-超时
+事件：超时
 1. 重传引起超时的Segment
 2. 重启定时器
 
-收到ACK
+事件：收到ACK
 - 如果确认此前未确认的Segment，更新SendBase
 - 如果窗口中还有违背确认的分组，重新启动定时器
 
