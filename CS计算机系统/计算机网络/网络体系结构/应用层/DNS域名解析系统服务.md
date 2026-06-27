@@ -57,7 +57,7 @@ tags:
 2. 经过一段时间后，缓存条目失效
 3. 本地域名服务器一般会缓存顶级域名服务器的映射
 
-## 协议
+# DNS协议
 
 资源记录RR（resource records）：格式为`(name, value, type, ttl)`
 - type=A：name=主机域名，value=IP地址
@@ -65,7 +65,6 @@ tags:
 - type=CNAME：name=域名别名，value=真实域名
 - type=MX：value是与name相对的邮件服务器
 
-### DNS协议
 
 DNS协议：查询query回复reply协议，消息格式相同
 ### DNS消息
