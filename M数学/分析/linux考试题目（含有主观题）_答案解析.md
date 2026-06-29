@@ -396,28 +396,28 @@ D. cat
 
 45.【单选题】 (1分)
 题干：用ls –al 命令列出下面的文件列表，是符号链接文件的是（ ）。
-A. -rw-rw-rw- 2 hel-s users 56 Sep 09 11:05 hello
-B. -rwxrwxrwx 2 hel-s users 56 Sep 09 11:05 goodbey
-C. drwxr--r-- 1 hel users 1024 Sep 10 08:10 zhang
-D. lrwxr--r-- 1 hel users   7 Sep 12 08:12 cheng
+A. `-rw-rw-rw- 2 hel-s users 56 Sep 09 11:05 hello`
+B. `-rwxrwxrwx 2 hel-s users 56 Sep 09 11:05 goodbey`
+C. `drwxr--r-- 1 hel users 1024 Sep 10 08:10 zhang`
+D. `lrwxr--r-- 1 hel users   7 Sep 12 08:12 cheng`
 答案：D
 解析：ls -al输出中，文件类型标识第一位为l表示符号链接（link）。-表示普通文件，d表示目录。选项D的第一位是l，所以是符号链接文件。
 
 46.【单选题】 (1分)
 题干：下列哪个命令可以查看Linux内核版本号？（ ）
-A. uname -a
-B. kernel
-C. version
-D. top
+A. `uname -a`
+B. `kernel`
+C. `version`
+D. `top`
 答案：A
 解析：uname -a命令显示系统信息，包括内核版本、主机名、操作系统类型等。top是进程查看命令，kernel和version不是有效命令。
 
 47.【单选题】 (1分)
 题干：文件example的访问权限为744，现要取消文件所有者的执行权限，同时增加同组用的写权限，下面的命令中正确的是（ ）。
-A. chmod u+x,g+w example
-B. chmod 646 example
-C. chmod u-x,g+w example
-D. chmod g+w example
+A. `chmod u+x,g+w example`
+B. `chmod 646 example`
+C. `chmod u-x,g+w example`
+D. `chmod g+w example`
 答案：C
 解析：u-x表示取消所有者的执行权限，g+w表示增加同组用户的写权限。744变为664（rw-rw-r--）。选项A是添加执行权限，错误；选项B直接设置646但没有说明原权限，选项D只添加组写权限。
 
