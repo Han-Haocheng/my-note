@@ -315,10 +315,10 @@ D. 邮件服务器
 
 36.【单选题】 (1分)
 题干：以下那条命令可将当前目录下的t1.doc 重命名为f2.txt。（ ）
-A. mv t1.doc f2.txt
-B. cp f2.txt t1.doc
-C. cat f2.txt t1.doc
-D. cp t1.doc>f2.txt
+A. `mv t1.doc f2.txt`
+B. `cp f2.txt t1.doc`
+C. `cat f2.txt t1.doc`
+D. `cp t1.doc>f2.txt`
 答案：A
 解析：mv命令用于移动或重命名文件，格式为mv 源文件 目标文件。cp是复制命令，cat用于连接文件，>是重定向符号。
 
